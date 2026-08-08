@@ -1,0 +1,1086 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="7" tvg-name="SOMOS HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/4vMDu42xeeLCE66LEMJ0vg?tags=CH_LOGO",SOMOS HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ee8a6cc35fdb4ab7adeed9d16593459f:5ca774838d5c887f7a8d7dee64b9a6b0
+https://chromecast.cvattv.com.ar/live/c6eds/Somos_Norte/SA_Live_dash_cenc/Somos_Norte.mpd
+
+#EXTINF:-1 tvg-id="8" tvg-name="METRO" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Ubwa9dt2jaXMblin8aTCtw?tags=CH_LOGO",METRO
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=719aa3a5e270c7f69eba374ed80d7986:97ac59118cf4cf242e2c31e87cd38e1e
+https://chromecast.cvattv.com.ar/live/c6eds/Metro/SA_Live_dash_cenc/Metro.mpd
+
+#EXTINF:-1 tvg-id="9" tvg-name="AMERICA 2 HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/PKQmsFunFuubjSQPop2k-Q?tags=CH_LOGO",AMERICA 2 HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=8ea235ce0826408b221c498115a9b62d:7aa9266ed91ea4510483370029dfcf45
+https://chromecast.cvattv.com.ar/live/c3eds/AmericaTV/SA_Live_dash_cenc/AmericaTV.mpd
+
+#EXTINF:-1 tvg-id="10" tvg-name="TELEFE HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/H__k71paYRrVP0funRIWvg?tags=CH_LOGO",TELEFE HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3cec1b1ea9799dda5596e64f37e5ed20:c69f3afde2085dcaaaddbf55246a0323
+https://chromecast.cvattv.com.ar/live/c6eds/TelefeHD/SA_Live_dash_cenc/TelefeHD.mpd
+
+#EXTINF:-1 tvg-id="11" tvg-name="TV PUBLICA HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/IE0Yf-Y3qxyupJcRblURuQ?tags=CH_LOGO",TV PUBLICA HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=cc8c82ac2ec7e9799527c29db7354e81:cc4aae173dd2ef17ae26be3f7ae87662
+https://chromecast.cvattv.com.ar/live/c6eds/Canal7/SA_Live_dash_cenc/Canal7.mpd
+
+#EXTINF:-1 tvg-id="12" tvg-name="EL TRECE HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/44HA8QkjCvLV4Gu5Vv8tEA?tags=CH_LOGO",EL TRECE HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5179017f49326d14af0a9ceec831aee6:09b4a463b029ebc28a288bed2da70a76
+https://chromecast.cvattv.com.ar/live/c3eds/ArtearHD/SA_Live_dash_cenc/ArtearHD.mpd
+
+#EXTINF:-1 tvg-id="13" tvg-name="EL NUEVE HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/pf22T_4bnBM9_704ysri5Q?tags=CH_LOGO",EL NUEVE HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=24f4ff211136ae6512a1b552200db405:602122f8426c5c942b8c18d299cc6020
+https://chromecast.cvattv.com.ar/live/c3eds/Canal9/SA_Live_dash_cenc/Canal9.mpd
+
+#EXTINF:-1 tvg-id="14" tvg-name="TN HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/tsozQzIAVMhh2R8LYB3Zdg?tags=CH_LOGO",TN HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=7ceb1cd0622cd7e88fcdc99fe3a55de6:951637093d41c7388a1ef3f620cfea21
+https://chromecast.cvattv.com.ar/live/c7eds/TodoNoticias/SA_Live_dash_cenc/TodoNoticias.mpd
+
+#EXTINF:-1 tvg-id="15" tvg-name="LA NACION" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/BG9e9Motv1bSmOQ5t3kDgw?tags=CH_LOGO",LA NACION
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=f4eade7bbc39b25402acfa301bbad04a:a74d1df4235a74878327aa8d53ff283c
+https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_cenc/La_Nacion.mpd
+
+#EXTINF:-1 tvg-id="16" tvg-name="C5N" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/ZknRLNGxolx2xY8zTN3suA?tags=CH_LOGO",C5N
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=050df5c6e78c774e78c3e99eef8a1b29:0e4141d6ab21a36cbc4da777ab3096d4
+https://chromecast.cvattv.com.ar/live/c7eds/C5N/SA_Live_dash_cenc/C5N.mpd
+
+#EXTINF:-1 tvg-id="17" tvg-name="CRONICA HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/SbhpLG6w5bpnevDhqf9b9w?tags=CH_LOGO",CRONICA HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=745e7abcc90d41ab706b2ac2f4371da3:50acd9d19d1361cb4a8a13a867bdc352
+https://chromecast.cvattv.com.ar/live/c7eds/CronicaTV/SA_Live_dash_cenc/CronicaTV.mpd
+
+#EXTINF:-1 tvg-id="18" tvg-name="26 TV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/u5NM8LAogdMb7qWMWD1jGg?tags=CH_LOGO",26 TV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e32aaa4b67430b3b51be1efce5a74ac5:ad60c5e1d378a97271bf8688f094d092
+https://chromecast.cvattv.com.ar/live/c6eds/26_TV_HD/SA_Live_dash_cenc/26_TV_HD.mpd
+
+#EXTINF:-1 tvg-id="19" tvg-name="A24 HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/S1H5miC70xaoxaRogPiNUQ?tags=CH_LOGO",A24 HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3b1b027dd011af20fd9956c16dc084fb:45f75aacf06593c9b693fe427c67e5b8
+https://chromecast.cvattv.com.ar/live/c7eds/America24/SA_Live_dash_cenc/America24.mpd
+
+#EXTINF:-1 tvg-id="20" tvg-name="MAGAZINE" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/HlbaG_QxXJ8kn5N3d-fH3A?tags=CH_LOGO",MAGAZINE
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=4f1235069d34c22cb73d9b78bae15587:55e068ff6b152e34c66dc639b38e8692
+https://chromecast.cvattv.com.ar/live/c3eds/Magazine/SA_Live_dash_cenc/Magazine.mpd
+
+#EXTINF:-1 tvg-id="21" tvg-name="NET TV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/GOJrLfHABd8X-fMCDhVDKw?tags=CH_LOGO",NET TV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=89d433166edd31d56df2a59df8ec6704:b2015faded0a456d10aa8db1b4cbac68
+https://chromecast.cvattv.com.ar/live/c6eds/Net_TV/SA_Live_dash_cenc/Net_TV.mpd
+
+#EXTINF:-1 tvg-id="22" tvg-name="ENCUENTRO" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/lOPHEs1DODTCdWw9_J_KUA?tags=CH_LOGO",ENCUENTRO
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ac3ae78beb64478ab390b4ad70e3e0c9:c7d669761c3516d852a0edf9e07c9198
+https://chromecast.cvattv.com.ar/live/c6eds/Encuentro/SA_Live_dash_cenc/Encuentro.mpd
+
+#EXTINF:-1 tvg-id="23" tvg-name="CNN EN ESPAÑOL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/VjWfxMDnAj0_OaHyfifOtw?tags=CH_LOGO",CNN EN ESPAÑOL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b20ed9da0e5457c9dfd3ae0b6092491:98997a7020c18cb28174a2490147830a
+https://chromecast.cvattv.com.ar/live/c6eds/CNN_en_Espanol/SA_Live_dash_cenc/CNN_en_Espanol.mpd
+
+#EXTINF:-1 tvg-id="24" tvg-name="ARGENTINA 12" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/LhJYx1DbJmE9D4tKJOZaOg?tags=CH_LOGO",ARGENTINA 12
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5299f96f873aa0f0e47edc4e15784717:9d53176b0969492f2d93f1867be1dce1
+https://chromecast.cvattv.com.ar/live/c7eds/Investigacion_Periodistica/SA_Live_dash_cenc/Investigacion_Periodistica.mpd
+
+#EXTINF:-1 tvg-id="25" tvg-name="BRAVO" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/s5bcN_UDJ3TW45O4-5-yrw?tags=CH_LOGO",BRAVO
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ad7fbbec39cea4a5a63ac13d94da48d4:f71087b4dc211db079237c0fb783eb93
+https://chromecast.cvattv.com.ar/live/c7eds/BravoTV/SA_Live_dash_cenc/BravoTV.mpd
+
+#EXTINF:-1 tvg-id="26" tvg-name="CARAS TV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/KVCHblMn-l_L9X1NjDYJkw?tags=CH_LOGO",CARAS TV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3440f1a9a7f87b9816efae067a04a928:3e3001c17db578d3fa22c8b8517813c4
+https://cdn.cvattv.com.ar/live/c7eds/CARAS/SA_Live_dash_cenc/CARAS.mpd
+
+#EXTINF:-1 tvg-id="30" tvg-name="KZO HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/h0sFN_bK9VXxjOK-Ko1k3w?tags=CH_LOGO",KZO HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=695d07988114f7fec31f8f27a6d67c32:8e4fbb96cff6a31c88f81565b199a13a
+https://chromecast.cvattv.com.ar/live/c6eds/KZO/SA_Live_dash_cenc/KZO.mpd
+
+#EXTINF:-1 tvg-id="36" tvg-name="DIPUTADOS TV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/o7gsJ0wh3eUYfVzs-hSOcA?tags=CH_LOGO",DIPUTADOS TV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9666b195171442afd4551a8de01291a6:1c0061df9b4b098e40355167e97cfbf0
+https://chromecast.cvattv.com.ar/live/c6eds/Diputados_TV/SA_Live_dash_cenc/Diputados_TV.mpd
+
+#EXTINF:-1 tvg-id="85" tvg-name="MIX TV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/wFcELFDufR1XY3WICrh5Mg?tags=CH_LOGO",MIX TV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0e1327b5b1f4dfe767aec622c9ef64ce:60c64a922af0121bf73261c825e33f18
+https://cdn.cvattv.com.ar/live/c4eds/MixTV/SA_Live_dash_cenc/MixTV.mpd
+
+#EXTINF:-1 tvg-id="90" tvg-name="CANAL 90" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/2S10DKPPNnGy5E3Vsv81LA?tags=CH_LOGO",CANAL 90
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ca50103f3285421e8be7da8c0c0e7a54:3608e92a6feddf228c1f035ebb764426
+https://chromecast.cvattv.com.ar/live/c6eds/Canal_90/SA_Live_dash_cenc/Canal_90.mpd
+
+#EXTINF:-1 tvg-id="100" tvg-name="DEPORTV HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/XMlPUQ7mIvaDO707-0z5MQ?tags=CH_LOGO",DEPORTV HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=f362097815892a4b83950f1d106ff0b2:4349e42e81c31a8389f4a42fcd298928
+https://chromecast.cvattv.com.ar/live/c3eds/DeporTVHD/SA_Live_dash_cenc/DeporTVHD.mpd
+
+#EXTINF:-1 tvg-id="101" tvg-name="TYC SPORTS HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/vub_hfkh4B1JFwp7LQ-GrA?tags=CH_LOGO",TYC SPORTS HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=2b21c8fa9a329cce311a4c4a4aa996a1:cc23ea1fb32629f9e1f48c8deeae3e5b
+https://chromecast.cvattv.com.ar/live/c7eds/TyCSport/SA_Live_dash_cenc/TyCSport.mpd
+
+#EXTINF:-1 tvg-id="102" tvg-name="ESPN 2" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/pKel4txgUUES1wvAVQK9DQ?tags=CH_LOGO",ESPN 2
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=65a5bfa3c7a72dde60be9b0c7406c8fc:0b40ae9f78a7bac3b57ecbf72d3c081e
+https://chromecast.cvattv.com.ar/live/c6eds/ESPN2_Arg/SA_Live_dash_cenc/ESPN2_Arg.mpd
+
+#EXTINF:-1 tvg-id="103" tvg-name="ESPN" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/6ujI2dFhkwCxWJhbEOCqmg?tags=CH_LOGO",ESPN
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e884b711ab111beb8a7ba1e7bcbdc9bf:cb89ee3961599e3e648a5aad60895f34
+https://chromecast.cvattv.com.ar/live/c3eds/ESPN2HD/SA_Live_dash_cenc/ESPN2HD.mpd
+
+#EXTINF:-1 tvg-id="104" tvg-name="ESPN 3 HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/GJZTYBktwR7UdbtNaK3PDg?tags=CH_LOGO",ESPN 3 HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=f4c9f97e2a36feab0e5077f2b44cbc4e:1743cd03dfe3736b2c95da91a783af38
+https://chromecast.cvattv.com.ar/live/c3eds/ESPN3/SA_Live_dash_cenc/ESPN3.mpd
+
+#EXTINF:-1 tvg-id="105" tvg-name="ESPN 4 HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/jGyt-p8MW55TcZMkzRBHLw?tags=CH_LOGO",ESPN 4 HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=cc8d44406ed6bf1898ad9f7a2d64f29e:fb85d059687ab0fc67805806204edbdf
+https://chromecast.cvattv.com.ar/live/c3eds/ESPNHD/SA_Live_dash_cenc/ESPNHD.mpd
+
+#EXTINF:-1 tvg-id="106" tvg-name="FOX SPORTS HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/HAq2thFBSFQ6BPwjbeV3mw?tags=CH_LOGO",FOX SPORTS HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=cbc2a0c7a38df0aa3333cd71841d3b0d:aac61b730e2ac1df23f1e872e7541c1b
+https://chromecast.cvattv.com.ar/live/c3eds/FoxSports/SA_Live_dash_cenc/FoxSports.mpd
+
+#EXTINF:-1 tvg-id="107" tvg-name="FOX SPORTS 2 HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/8lNQixZEsN3Eadq_eLSVqg?tags=CH_LOGO",FOX SPORTS 2 HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c98ddffc470fe449ae1a8d6492116976:5086d370e840010232cf4532b16e197f
+https://chromecast.cvattv.com.ar/live/c3eds/FoxSports2HD/SA_Live_dash_cenc/FoxSports2HD.mpd
+
+#EXTINF:-1 tvg-id="108" tvg-name="FOX SPORTS 3 HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/aAian9WeLoU0vTudB9xL2g?tags=CH_LOGO",FOX SPORTS 3 HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=55b47390cf9e4997dae6dac85e057875:fa39e855543c5d70f30600d59e5e4c1b
+https://chromecast.cvattv.com.ar/live/c3eds/FoxSports3HD/SA_Live_dash_cenc/FoxSports3HD.mpd
+
+#EXTINF:-1 tvg-id="109" tvg-name="DSPORTS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/YIJDr-r03_wmAKa8DzDDew?tags=CH_LOGO",DSPORTS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=4db80473af2ed318c41d879f2822203e:d30f94e60344adf0f4b242a5952575ad
+https://cdn.cvattv.com.ar/live/c3eds/DSports_1/SA_Live_dash_cenc/DSports_1.mpd
+
+#EXTINF:-1 tvg-id="110" tvg-name="DSPORTS 2" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Ol1k8o68C2JoewlB-N2rrw?tags=CH_LOGO",DSPORTS 2
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0dd493fa74640442abd75139b67307d6:31cf4295392d939a97f3b60ebf1ceb44
+https://cdn.cvattv.com.ar/live/c3eds/DSports_2/SA_Live_dash_cenc/DSports_2.mpd
+
+#EXTINF:-1 tvg-id="111" tvg-name="NBA TV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/hbMAAzaqDDeSCIBhaCW_OQ?tags=CH_LOGO",NBA TV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d0c38de3c9844e4e9f975dffb3eff8ad:141ca0fdf6ebadfa7107576b8e09e117
+https://chromecast.cvattv.com.ar/live/c6eds/NBA_TV/SA_Live_dash_cenc/NBA_TV.mpd
+
+#EXTINF:-1 tvg-id="112" tvg-name="DISC TURBO HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/rjlPBFz0211asbTWEdwy9g?tags=CH_LOGO",DISC TURBO HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=a611ddbf8c15fa617a0c391cb7b3e128:0cd1300baf8890380fd41124962195c4
+https://chromecast.cvattv.com.ar/live/c7eds/DiscoveryTurbo/SA_Live_dash_cenc/DiscoveryTurbo.mpd
+
+#EXTINF:-1 tvg-id="113" tvg-name="PX SPORTS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/_3oo9pwvNsFdzJfzNdx2zQ?tags=CH_LOGO",PX SPORTS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9393321daef1463fc7e2e060298db852:be6bc91e17816f67e62596bed463c5ad
+https://chromecast.cvattv.com.ar/live/c7eds/PX_Sports/SA_Live_dash_cenc/PX_Sports.mpd
+
+#EXTINF:-1 tvg-id="114" tvg-name="EL GARAGE" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/VMtd4DTffIxtznKvY0LNyg?tags=CH_LOGO",EL GARAGE
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=03d1dfb8df034d8b81e57753df00a36d:08d83660db4a73bb1d61d60b09df5f4d
+https://chromecast.cvattv.com.ar/live/c6eds/El_Garage/SA_Live_dash_cenc/El_Garage.mpd
+
+#EXTINF:-1 tvg-id="115" tvg-name="AMERICA SPORTS SATELITAL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/qPhxg2V8AzmZJNNmXIuRKA?tags=CH_LOGO",AMERICA SPORTS SATELITAL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=a0aa01337a2148bda1e21862295ae037:fee0f87a0527497351fc54ce36ad1de2
+https://chromecast.cvattv.com.ar/live/c6eds/America_Sports/SA_Live_dash_cenc/America_Sports.mpd
+
+#EXTINF:-1 tvg-id="116" tvg-name="GOLF CHANNEL HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/zqVvs3FsL8K_dCUnWqt7SA?tags=CH_LOGO",GOLF CHANNEL HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=38d6226b7cd2cfa86b4b9cdaa455e7d7:24f0ef2bf787647cc02df870417eed2b
+https://chromecast.cvattv.com.ar/live/c6eds/Golf_Channel/SA_Live_dash_cenc/Golf_Channel.mpd
+
+#EXTINF:-1 tvg-id="117" tvg-name="EVENTOS HD 1" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/dEOhDb7vsbbZcm6GlzVAHQ?tags=CH_LOGO",EVENTOS HD 1
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5c86e237317c2231ac1bc130e995fad6:dcacf7b239ee03df3c69ca11dbcde4eb
+https://chromecast.cvattv.com.ar/live/c3eds/Eventos1HD/SA_Live_dash_cenc/Eventos1HD.mpd
+
+#EXTINF:-1 tvg-id="118" tvg-name="EVENTOS HD 2" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/j-4fXBBL4rvQ2EQFknGe_w?tags=CH_LOGO",EVENTOS HD 2
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e54e9ea87a634658fbba0e380aa701a7:4e486d25d7d0e7d131743b285963c643
+https://chromecast.cvattv.com.ar/live/c6eds/Eventos_2_HD/SA_Live_dash_cenc/Eventos_2_HD.mpd
+
+#EXTINF:-1 tvg-id="200" tvg-name="PAKAPAKA" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/dYC5bzropBtx3w3hG3aMKQ?tags=CH_LOGO",PAKAPAKA
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=334001b2f2644df9bdf35e92d2b89f8f:475ec87d86ed0636dbb6d6d9d4a43bb7
+https://chromecast.cvattv.com.ar/live/c6eds/PAKA_PAKA/SA_Live_dash_cenc/PAKA_PAKA.mpd
+
+#EXTINF:-1 tvg-id="201" tvg-name="DISNEY HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/O-yxzBoD5wK-vDDkbEmrbw?tags=CH_LOGO",DISNEY HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=4a742e478d14023e1993e011d9415f94:0df77ede9bc744376836d21afa137dda
+https://chromecast.cvattv.com.ar/live/c3eds/DisneyChannelHD/SA_Live_dash_cenc/DisneyChannelHD.mpd
+
+#EXTINF:-1 tvg-id="202" tvg-name="NICKELODEON HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/uB3dgqC_95tiEJj2Bl47_g?tags=CH_LOGO",NICKELODEON HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=61c18cefecc2d067beaa9ff181305345:38d6f650cbf9a38fd9f35c01f98e647a
+https://chromecast.cvattv.com.ar/live/c3eds/Nickelodeon/SA_Live_dash_cenc/Nickelodeon.mpd
+
+#EXTINF:-1 tvg-id="203" tvg-name="CARTOON NETWORK" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/LHjap1OMGwF3fDq3bcamfg?tags=CH_LOGO",CARTOON NETWORK
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d7df56efaa36a71141d238854cc46d1d:8abb2ee9150d8b2af8ebec0de0f833c8
+https://chromecast.cvattv.com.ar/live/c3eds/CartoonNetwork/SA_Live_dash_cenc/CartoonNetwork.mpd
+
+#EXTINF:-1 tvg-id="204" tvg-name="DREAMWORKS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/6l_DEbSF66b1Bt6_TpqjhQ?tags=CH_LOGO",DREAMWORKS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=7f30c43e47544412221fd64201d92f4b:f83d09d75a0946b1d71aa48c201b4d8b
+https://chromecast.cvattv.com.ar/live/c7eds/Dreamworks/SA_Live_dash_cenc/Dreamworks.mpd
+
+#EXTINF:-1 tvg-id="205" tvg-name="DISCOVERY KIDS HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/awF5jN8kYIm6Fw7dd4ktEQ?tags=CH_LOGO",DISCOVERY KIDS HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ffb2f0f63c23a3592d4653e938b9ca19:d3661ae881fc55fc7a15815cd439747b
+https://chromecast.cvattv.com.ar/live/c6eds/Discovery_Kids/SA_Live_dash_cenc/Discovery_Kids.mpd
+
+#EXTINF:-1 tvg-id="206" tvg-name="CARTOONITO HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/whJAVEBF9f5zYbQ66Bqx2A?tags=CH_LOGO",CARTOONITO HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5792e613fceb699c79cbc0e75fe4cd37:a672793730476ed23e5c1bce2ff570c6
+https://chromecast.cvattv.com.ar/live/c7eds/Boomerang/SA_Live_dash_cenc/Boomerang.mpd
+
+#EXTINF:-1 tvg-id="207" tvg-name="DISNEY JR" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/buoo9IJLHiHWlwsIXmsCfg?tags=CH_LOGO",DISNEY JR
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=bd29c4a538f28845ce33581111749428:46d9589f41a11c3637c07c604956deac
+https://chromecast.cvattv.com.ar/live/c7eds/DisneyJr/SA_Live_dash_cenc/DisneyJr.mpd
+
+#EXTINF:-1 tvg-id="208" tvg-name="BABY TV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/PidsWNhfr_UvjHI_pVHK8A?tags=CH_LOGO",BABY TV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9e09f0a3ecb932582e0f3bc6a6194c8d:6d2363b7ba7680ea3bf6dcbad1efa5bf
+https://chromecast.cvattv.com.ar/live/c7eds/BabyTV/SA_Live_dash_cenc/BabyTV.mpd
+
+#EXTINF:-1 tvg-id="209" tvg-name="TOONCAST" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Prkn-200c1L8pLHnVjDkRg?tags=CH_LOGO",TOONCAST
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=10638a722eb54c64bfb0e7a77483686a:41a7d3d522e19215b7e8f611b6902d61
+https://chromecast.cvattv.com.ar/live/c6eds/Tooncast/SA_Live_dash_cenc/Tooncast.mpd
+
+#EXTINF:-1 tvg-id="210" tvg-name="NICK JR." tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/9SuAkXBoCboIuswqt6YTFg?tags=CH_LOGO",NICK JR.
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e824b2277a86fd6adfc40aa948e5064a:28da2dbbe8e1a1463bbb23895b922083
+https://chromecast.cvattv.com.ar/live/c6eds/Nick_Jr/SA_Live_dash_cenc/Nick_Jr.mpd
+
+#EXTINF:-1 tvg-id="211" tvg-name="EL CANAL DEL PAYASO PLIM PLIM" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/tnqww25oGSPXrqamnOOqsw?tags=CH_LOGO",EL CANAL DEL PAYASO PLIM PLIM
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=8e88e1572dcd2b31a10026668d628d61:ab95bdc2655aff4f4a8e512fb68c80df
+https://cdn.cvattv.com.ar/live/c6eds/Plim_Plim/SA_Live_dash_cenc/Plim_Plim.mpd
+
+#EXTINF:-1 tvg-id="212" tvg-name="KIDOO" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/PNtwH85WxWLCq9YQDAL3UQ?tags=CH_LOGO",KIDOO
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=dcd89337a501ab929c01a039774089dc:e96cc7be9139a8d581b3f5eebebfc10d
+https://cdn.cvattv.com.ar/live/c6eds/Kidoo/SA_Live_dash_cenc/Kidoo.mpd
+
+#EXTINF:-1 tvg-id="213" tvg-name="EL REINO INFANTIL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/VZirRVsFrCclyGZf9mHQlg?tags=CH_LOGO",EL REINO INFANTIL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3b48baa186f6d56fb6850afad5ce6c44:4846e5c755043f26c71630fb004d2e96
+https://cdn.cvattv.com.ar/live/c7eds/Reino_Infantil/SA_Live_dash_cenc/Reino_Infantil.mpd
+
+#EXTINF:-1 tvg-id="300" tvg-name="CINE.AR HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/lGD2sQr1S81F00lrPl20xQ?tags=CH_LOGO",CINE.AR HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d44f40e49d2945c1a3701c0885ff0b00:6382b6279087402714b6824688c456df
+https://chromecast.cvattv.com.ar/live/c6eds/INCAA_Tv/SA_Live_dash_cenc/INCAA_Tv.mpd
+
+#EXTINF:-1 tvg-id="301" tvg-name="CINEMAX HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/jgJnzF9fzNCiCuglhl3-EQ?tags=CH_LOGO",CINEMAX HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=977928a92b82ba3781741a6470f8f45b:51f4e62827c128f7210b79a11587661a
+https://chromecast.cvattv.com.ar/live/c6eds/Cinemax/SA_Live_dash_cenc/Cinemax.mpd
+
+#EXTINF:-1 tvg-id="303" tvg-name="VOLVER" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/1yxr6LbewhS52a1JGKqpTA?tags=CH_LOGO",VOLVER
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=194e53184a424ce6989ad82c5f28fbc5:65d60c5cc4de031172be0a6a51edbdfe
+https://chromecast.cvattv.com.ar/live/c6eds/Volver/SA_Live_dash_cenc/Volver.mpd
+
+#EXTINF:-1 tvg-id="304" tvg-name="SPACE HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/FZXKTS4s12W5V3cpF1QM4g?tags=CH_LOGO",SPACE HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0942e4ecd1bd3567e8f9447f45c20a12:efca6264f04cf7373de0c30ec79fe909
+https://cdn.cvattv.com.ar/live/c3eds/Space/SA_Live_dash_cenc/Space.mpd
+
+#EXTINF:-1 tvg-id="305" tvg-name="CINECANAL HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/v5iYyWemjEtuV8k0QnDLug?tags=CH_LOGO",CINECANAL HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=6003e92dd0d9f548329015c9e15dd578:213cf85cb5f9fe569757004a77e05948
+https://chromecast.cvattv.com.ar/live/c3eds/CinecanalHD/SA_Live_dash_cenc/CinecanalHD.mpd
+
+#EXTINF:-1 tvg-id="306" tvg-name="TNT HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/HOsbHOrwv4b-eMrGQHgLLw?tags=CH_LOGO",TNT HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=faad1722a575f4d9ec7b774db63c879c:cf0184830344ba36ad2ffef9dd2dd9d0
+https://chromecast.cvattv.com.ar/live/c3eds/TNT_HD_Arg/SA_Live_dash_cenc/TNT_HD_Arg.mpd
+
+#EXTINF:-1 tvg-id="307" tvg-name="TNT SERIES" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/lSoF4Q-hEcUAjewmiH-4lg?tags=CH_LOGO",TNT SERIES
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5c14d6aeb19bf113edf91a7b544253cb:8d776d6f9c5c840ebe88d767dd731692
+https://chromecast.cvattv.com.ar/live/c3eds/TNTSeries/SA_Live_dash_cenc/TNTSeries.mpd
+
+#EXTINF:-1 tvg-id="308" tvg-name="FX HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/ca4ji9rF9Sh8CkWKki8Pzw?tags=CH_LOGO",FX HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9ab9c42c713e0fb5517dc77cc19d6755:d8c271b82387e609b6c19e5e79240aff
+https://cdn.cvattv.com.ar/live/c3eds/FXHD/SA_Live_dash_cenc/FXHD.mpd
+
+#EXTINF:-1 tvg-id="309" tvg-name="STAR CHANNEL HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/pp9P0CQ3Tr3saLnk1K2AgQ?tags=CH_LOGO",STAR CHANNEL HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=8023e85ef9d17561ee1b424179b1b15e:477ad189f1fcd2baec026068107f862f
+https://chromecast.cvattv.com.ar/live/c3eds/FOXHD/SA_Live_dash_cenc/FOXHD.mpd
+
+#EXTINF:-1 tvg-id="310" tvg-name="SONY HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/C_lt4eueyd65TOmGP5CVxA?tags=CH_LOGO",SONY HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=fd9619f9d7c2d5115a339941279e0b4b:bf55635e6591f905659fa27ab3ca2812
+https://chromecast.cvattv.com.ar/live/c7eds/SonyHD/SA_Live_dash_cenc/SonyHD.mpd
+
+#EXTINF:-1 tvg-id="311" tvg-name="WARNER HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/lEJaQrd2zxfbq4yG7GVGJw?tags=CH_LOGO",WARNER HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=069bd3f0b6c279467e08549f17bf5bd0:5afa7e369a6de1093818a85af912a775
+https://chromecast.cvattv.com.ar/live/c7eds/WarnerHD/SA_Live_dash_cenc/WarnerHD.mpd
+
+#EXTINF:-1 tvg-id="312" tvg-name="UNIVERSAL CHANNEL HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/ciwOM-VXylKqJzf9viWjeA?tags=CH_LOGO",UNIVERSAL CHANNEL HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=6cf9a13d6fd65a0f2e1cee3969aab9f5:ea61c3c1adee71b5c2e9744e41d4b75f
+https://cdn.cvattv.com.ar/live/c6eds/Universal_Channel_HD/SA_Live_dash_cenc/Universal_Channel_HD.mpd
+
+#EXTINF:-1 tvg-id="313" tvg-name="AXN HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/PBAhfCPIZYxtjyckE5YRbg?tags=CH_LOGO",AXN HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=03e77b5bbf5135a85d587c5af2f2f730:1dd1ab1938a791d03f09eb88478b4880
+https://chromecast.cvattv.com.ar/live/c7eds/AXNHD/SA_Live_dash_cenc/AXNHD.mpd
+
+#EXTINF:-1 tvg-id="314" tvg-name="STUDIO UNIVERSAL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/wbidhpzmabaDfMcZTc-Wgg?tags=CH_LOGO",STUDIO UNIVERSAL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d9b541e3cd064d569843da42788d4263:bba5d26ad5051fb3f2cf7e3dd8a4a7d8
+https://chromecast.cvattv.com.ar/live/c6eds/Studio_Universal/SA_Live_dash_cenc/Studio_Universal.mpd
+
+#EXTINF:-1 tvg-id="315" tvg-name="A&E HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/RU1HcljE4i3xPpFg9mhUCQ?tags=CH_LOGO",A&E HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=db12035627a4b3d7198b761f36b4a290:80ca761a875992ac0e50b0851d5563fe
+https://chromecast.cvattv.com.ar/live/c7eds/AEHD/SA_Live_dash_cenc/AEHD.mpd
+
+#EXTINF:-1 tvg-id="316" tvg-name="EUROPA EUROPA HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/dblMns5X14N1BcVvjn3_GA?tags=CH_LOGO",EUROPA EUROPA HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b47f257df0314d09a7f8355c3abe1dc6:bdc9f1696a82ee7398dd3a7fa82300e2
+https://cdn.cvattv.com.ar/live/c6eds/Europa_Europa/SA_Live_dash_cenc/Europa_Europa.mpd
+
+#EXTINF:-1 tvg-id="317" tvg-name="USANETWORK" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/PDBE9vBHXQYBlgCLtcVpIw?tags=CH_LOGO",USANETWORK
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c754b522b3b87dc2ba2da3e35154ec14:141a51e9e83861ae99b4b217431710b3
+https://chromecast.cvattv.com.ar/live/c7eds/USA_Network/SA_Live_dash_cenc/USA_Network.mpd
+
+#EXTINF:-1 tvg-id="318" tvg-name="TCM" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/-UdH-NcJjn-2oF4McDWFdA?tags=CH_LOGO",TCM
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=a5f44a5e30714cf3bcee7c7f15a08b4e:c3c141ae941ab9750339c3af45a65ce2
+https://chromecast.cvattv.com.ar/live/c6eds/TCM/SA_Live_dash_cenc/TCM.mpd
+
+#EXTINF:-1 tvg-id="319" tvg-name="AMC HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/HKbnnO9g-BCVrVCSnSx_Dg?tags=CH_LOGO",AMC HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=1fa6a86fd80b6d1425dde74482b5dc9c:744c3636d57a651ab444cf9fe5f95b33
+https://cdn.cvattv.com.ar/live/c3eds/AMC/SA_Live_dash_cenc/AMC.mpd
+
+#EXTINF:-1 tvg-id="320" tvg-name="AMC SERIES" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/_6hpzUyEuE84LV5-MuSnAw?tags=CH_LOGO",AMC SERIES
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=10d3d4f33a6bad277accc2688c46b406:588fd56bcab1fcdb4f33b5c2f7018d29
+https://cdn.cvattv.com.ar/live/c6eds/AMC_Series/SA_Live_dash_cenc/AMC_Series.mpd
+
+#EXTINF:-1 tvg-id="321" tvg-name="ATRESERIES HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Udqzh8pyX4ZJUmmeNZ4voQ?tags=CH_LOGO",ATRESERIES HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5e34e08ae5ae440f01a03e505dd24a57:ed30cc7f5040a75d73f619320249272b
+https://chromecast.cvattv.com.ar/live/c7eds/A3_Series/SA_Live_dash_cenc/A3_Series.mpd
+
+#EXTINF:-1 tvg-id="322" tvg-name="GOLDEN" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/anB5Thv7Mm9EFKv4Xo51gQ?tags=CH_LOGO",GOLDEN
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b7d085dbd4539afcc6a55445efb2b04e:0a55fbe044fed379d1632b589265b571
+https://cdn.cvattv.com.ar/live/c6eds/Golden/SA_Live_dash_cenc/Golden.mpd
+
+#EXTINF:-1 tvg-id="323" tvg-name="SONY MOVIES" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/l-K8FTzmm6nWaWLWuzdxkA?tags=CH_LOGO",SONY MOVIES
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=88b9c41e72acd5b589bbfb4776969781:43b9403f7a9e28fc2d7cbf10373b85aa
+https://chromecast.cvattv.com.ar/live/c7eds/Sony_Movies/SA_Live_dash_cenc/Sony_Movies.mpd
+
+#EXTINF:-1 tvg-id="324" tvg-name="EUROCHANNEL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/vUb3tutw_PIAo6qwGh90LA?tags=CH_LOGO",EUROCHANNEL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=6f0fc214d9844a7590f0884d55b44c42:b2fe1bb5f9c79035301c328c1e93b0ee
+https://chromecast.cvattv.com.ar/live/c6eds/Eurochannel/SA_Live_dash_cenc/Eurochannel.mpd
+
+#EXTINF:-1 tvg-id="325" tvg-name="DISCOVERY ID" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/gBiUe3pbTyWkWoJJB6DHjQ?tags=CH_LOGO",DISCOVERY ID
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0956caf2e2bd41f49fdcead7cc94fe24:640c49578073a911938617eb4e652d6c
+https://chromecast.cvattv.com.ar/live/c7eds/ID/SA_Live_dash_cenc/ID.mpd
+
+#EXTINF:-1 tvg-id="326" tvg-name="COMEDY CENTRAL HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/E3bFS6T1KYfcZtaUJ0wjZg?tags=CH_LOGO",COMEDY CENTRAL HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=4013f784c5ef4318ad47024e61eb094e:bad433a547f97c7f65cda5e83b8dd416
+https://chromecast.cvattv.com.ar/live/c7eds/ComedyCentral/SA_Live_dash_cenc/ComedyCentral.mpd
+
+#EXTINF:-1 tvg-id="328" tvg-name="A3CINE" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/YS6jffitXAkU47DggbrKHg?tags=CH_LOGO",A3CINE
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d6ff881a6f07986a80d6ad6f041b57d4:b401c87c2ab11a1a488ee1c474b109ae
+https://chromecast.cvattv.com.ar/live/c7eds/A3_Cine/SA_Live_dash_cenc/A3_Cine.mpd
+
+#EXTINF:-1 tvg-id="329" tvg-name="DHE" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/aW5SZQAtH50WVnv2bgYslQ?tags=CH_LOGO",DHE
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ff800156f81f70c687eccaadedc2ca15:937ba1301e27008b34d02b9d8a31a0db
+https://chromecast.cvattv.com.ar/live/c7eds/DHE/SA_Live_dash_cenc/DHE.mpd
+
+#EXTINF:-1 tvg-id="330" tvg-name="PASIONES" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/UXOPMKA8jylVCKBQUsufyw?tags=CH_LOGO",PASIONES
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d41cf825e878f0d8e276218af7f5b7e1:13d1b73ab578ab8623be9347bcf8972a
+https://chromecast.cvattv.com.ar/live/c7eds/Pasiones/SA_Live_dash_cenc/Pasiones.mpd
+
+#EXTINF:-1 tvg-id="331" tvg-name="TELEMUNDO HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/TuOPfNE6Hir1JE4yflHx1A?tags=CH_LOGO",TELEMUNDO HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=53d752e4649dadd808d913985f86ee77:d1fd24db1b61d634cabfc44538ce9b0e
+https://chromecast.cvattv.com.ar/live/c7eds/Telemundo_HD/SA_Live_dash_cenc/Telemundo_HD.mpd
+
+#EXTINF:-1 tvg-id="332" tvg-name="TNT NOVELAS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/NHkxUfsgs3z-DC1t0Jf2mA?tags=CH_LOGO",TNT NOVELAS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=49a0179b034ae899cb67d8a5834181aa:486e2c6d69adea7e17f2960e8e366612
+https://cdn.cvattv.com.ar/live/c6eds/TBS/SA_Live_dash_cenc/TBS.mpd
+
+#EXTINF:-1 tvg-id="333" tvg-name="TLNOVELAS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/fKkBD9R5bUMO1feOQQdzhw?tags=CH_LOGO",TLNOVELAS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=60cb38a05880cd0eb429f71398609540:c251aac7943c0d1324aa9a4129f3afd4
+https://cdn.cvattv.com.ar/live/c6eds/Telenovelas/SA_Live_dash_cenc/Telenovelas.mpd
+
+#EXTINF:-1 tvg-id="335" tvg-name="ADULT SWIM HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/DfNwCrbegGgnA7-H3HtypA?tags=CH_LOGO",ADULT SWIM HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9be1432e1e594c8d0648a44d3d9f0c46:8e6c785b14d973c504074b1920f11b15
+https://cdn.cvattv.com.ar/live/c3eds/Adult_Swim/SA_Live_dash_cenc/Adult_Swim.mpd
+
+#EXTINF:-1 tvg-id="400" tvg-name="LIFETIME" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/tb5f3wEz9eQjLS4IbOw6bw?tags=CH_LOGO",LIFETIME
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=eae51b1d67ff47adac7b6bd3a4b1120a:b4d6bb47193f33ffc12379cdc447455d
+https://chromecast.cvattv.com.ar/live/c6eds/Lifetime/SA_Live_dash_cenc/Lifetime.mpd
+
+#EXTINF:-1 tvg-id="401" tvg-name="EL GOURMET" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/E6pPSjet8cErV3W5l_18zw?tags=CH_LOGO",EL GOURMET
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=93d853ac4c8e24cf0295f6f97ee53bd3:fa5817fab4fb054ccea1abb9f3d767ed
+https://chromecast.cvattv.com.ar/live/c3eds/Gourmet/SA_Live_dash_cenc/Gourmet.mpd
+
+#EXTINF:-1 tvg-id="403" tvg-name="FOOD NETWORK HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/PTlvBnVvE7BAD5-s627miQ?tags=CH_LOGO",FOOD NETWORK HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=6ca0fbad21a0e908c0280dcc27e6ee0e:62670eedbafdf9360b4ecaed738e26cd
+https://chromecast.cvattv.com.ar/live/c6eds/Food_Network/SA_Live_dash_cenc/Food_Network.mpd
+
+#EXTINF:-1 tvg-id="404" tvg-name="ENTERTAINMENT TELEVISION HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/cgvTJ4y2ivlSqdwg8dRBvg?tags=CH_LOGO",ENTERTAINMENT TELEVISION HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5883553207f13e3dc8cecd1113d5ba68:45434d40636dfa0e5312b93218e02185
+https://chromecast.cvattv.com.ar/live/c6eds/E_Entertainment_Television/SA_Live_dash_cenc/E_Entertainment_Television.mpd
+
+#EXTINF:-1 tvg-id="405" tvg-name="HOME AND HEALTH HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/BFvn4fj8fcDWhtDSEnZjdg?tags=CH_LOGO",HOME AND HEALTH HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9b0a76dd7a0df1e1b4320aeb1254d1a9:d011267775c38d6d2ab09b428c03d63f
+https://chromecast.cvattv.com.ar/live/c3eds/DiscoveryHomeHealthHD/SA_Live_dash_cenc/DiscoveryHomeHealthHD.mpd
+
+#EXTINF:-1 tvg-id="407" tvg-name="DISCOVERY TLC HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/iqHLso_6n6e__kVJBOiQ8g?tags=CH_LOGO",DISCOVERY TLC HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=58761c7b2819491eb3a0d765842c341a:9dabc48f88bd7f266734e57501bd6f47
+https://chromecast.cvattv.com.ar/live/c6eds/TLC/SA_Live_dash_cenc/TLC.mpd
+
+#EXTINF:-1 tvg-id="408" tvg-name="HGTV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/xOSuqBfoVCbNbiwZENtZtg?tags=CH_LOGO",HGTV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=43bc6a87ee4f21aa320ba00b980a6fd8:bd55130539a30faa1d90b3142eebe0b2
+https://chromecast.cvattv.com.ar/live/c7eds/Home_and_Garden/SA_Live_dash_cenc/Home_and_Garden.mpd
+
+#EXTINF:-1 tvg-id="409" tvg-name="HOLA TV HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/BJtk3lOacTL4LgGEdKHqgg?tags=CH_LOGO",HOLA TV HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5d759477f0ad1bdef2c6de09e7c275fd:82cc6eea185eecc934df95adfbbf9dbc
+https://chromecast.cvattv.com.ar/live/c7eds/Hola_TV/SA_Live_dash_cenc/Hola_TV.mpd
+
+#EXTINF:-1 tvg-id="420" tvg-name="CANAL RURAL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/RKSCE9M6ShGyLYiIR0bl1A?tags=CH_LOGO",CANAL RURAL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b02c568163c14cfda4ddb958a0aab742:ef64a70ac85a663a3308be6476610aad
+https://chromecast.cvattv.com.ar/live/c6eds/Canal_Rural/SA_Live_dash_cenc/Canal_Rural.mpd
+
+#EXTINF:-1 tvg-id="422" tvg-name="SUN CHANNEL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Py_cEsIX-3v3ss32_KgP-w?tags=CH_LOGO",SUN CHANNEL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=158177692aa3463eae5f4e1f72403e9c:1c6c026fba9cf7ecb576c7bedce0ead4
+https://chromecast.cvattv.com.ar/live/c6eds/Sun_Channel/SA_Live_dash_cenc/Sun_Channel.mpd
+
+#EXTINF:-1 tvg-id="423" tvg-name="TELEMAX" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/AwrQT5Z51vOeKObYG58LZg?tags=CH_LOGO",TELEMAX
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e7ec364ad6854fedad797538cb58780d:57dfb3fca2ca35b37ff81c35595e9be8
+https://chromecast.cvattv.com.ar/live/c6eds/Telemax/SA_Live_dash_cenc/Telemax.mpd
+
+#EXTINF:-1 tvg-id="424" tvg-name="CANAL SANTA MARÍA" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/2CN6FrQYv-f3Zmr1EnRA1g?tags=CH_LOGO",CANAL SANTA MARÍA
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d456fba3fccb4c06a0f4776fe412400b:ca5530ffe42a38759d3887c82d6a909a
+https://chromecast.cvattv.com.ar/live/c3eds/Senal_Maria/SA_Live_dash_cenc/Senal_Maria.mpd
+
+#EXTINF:-1 tvg-id="425" tvg-name="CANAL ORBE 21" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/xXfhjHBISBtHhLSBUHZ7hA?tags=CH_LOGO",CANAL ORBE 21
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=29ccae9b98d74e76b35ac4e9a7fd1af1:cd6f0d4dca0fc30533e845fc8ea6a945
+https://chromecast.cvattv.com.ar/live/c6eds/Canal_21/SA_Live_dash_cenc/Canal_21.mpd
+
+#EXTINF:-1 tvg-id="426" tvg-name="EWTN" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/lMNtmsIs9OfsJ-ZxIG92zA?tags=CH_LOGO",EWTN
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=07df3c48652a431ab779d133f085b799:ee2fbeec1ecdffa5617383f684dfda0e
+https://chromecast.cvattv.com.ar/live/c6eds/EWTN/SA_Live_dash_cenc/EWTN.mpd
+
+#EXTINF:-1 tvg-id="427" tvg-name="CANAL LUZ" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/skR_HWeVKregO8eFKeplew?tags=CH_LOGO",CANAL LUZ
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=f7523ea5a2da78c465d928be1d81e2a5:870ad69e98abd52b443bd8f0204b3bc4
+https://chromecast.cvattv.com.ar/live/c7eds/CANAL_LUZ/SA_Live_dash_cenc/CANAL_LUZ.mpd
+
+#EXTINF:-1 tvg-id="428" tvg-name="DAYSTAR" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/FFhFxULf0K51e_tXUuG-Ew?tags=CH_LOGO",DAYSTAR
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=002dda055fd4b6f2b4c80e63e9accd62:09b90b0fc347ce6ac854935626103938
+https://cdn.cvattv.com.ar/live/c7eds/Daystar/SA_Live_dash_cenc/Daystar.mpd
+
+#EXTINF:-1 tvg-id="450" tvg-name="Nat Geo Channel HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/l1d77znunhRLOy6hvZYZ_A?tags=CH_LOGO",Nat Geo Channel HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=4be0c61ceddc62294cc9e23b627af53d:852c1935d11c3c53d0a1ceff3bb3bf16
+https://chromecast.cvattv.com.ar/live/c3eds/NatGeoHD/SA_Live_dash_cenc/NatGeoHD.mpd
+
+#EXTINF:-1 tvg-id="451" tvg-name="DISCOVERY HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/EsvkD06EpyPQG58R6A82yA?tags=CH_LOGO",DISCOVERY HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c283c84a7af0d7c8b9b612a8fb22a001:f45510c721eebd6eaa86a2e16ccbd77d
+https://chromecast.cvattv.com.ar/live/c3eds/DiscoveryHD/SA_Live_dash_cenc/DiscoveryHD.mpd
+
+#EXTINF:-1 tvg-id="452" tvg-name="ANIMAL PLANET" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/CGK4TLWx_s-GVxkGA69uVQ?tags=CH_LOGO",ANIMAL PLANET
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=4146a8ecbb0540dc807c6389ee87e0bc:0c3cdc1b3e4617c57361265e9fa4c5bd
+https://chromecast.cvattv.com.ar/live/c7eds/AnimalPlanet/SA_Live_dash_cenc/AnimalPlanet.mpd
+
+#EXTINF:-1 tvg-id="453" tvg-name="DISCOVERY HD THEATER" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/xmBN33mkEYJKSqTro1-5sQ?tags=CH_LOGO",DISCOVERY HD THEATER
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5279c05ea51c4dae8e7fa6be88448089:b28dfafba4b848dfd5d7c177ebf19108
+https://chromecast.cvattv.com.ar/live/c6eds/Theater_HD/SA_Live_dash_cenc/Theater_HD.mpd
+
+#EXTINF:-1 tvg-id="454" tvg-name="HISTORY HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/yNw82gG5hmdPJFUfnL_t5A?tags=CH_LOGO",HISTORY HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e82318e518ba70cea3d7b37bef99e692:a05fcb634c071a514e3039e1c274b4db
+https://chromecast.cvattv.com.ar/live/c7eds/HistoryHD/SA_Live_dash_cenc/HistoryHD.mpd
+
+#EXTINF:-1 tvg-id="456" tvg-name="CANAL A" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/IScOx6Ju6ANYu51LB7XhPQ?tags=CH_LOGO",CANAL A
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=324ec73787744554ae1aef231a4f8f97:677a040674d1d0eccef327269b222bae
+https://chromecast.cvattv.com.ar/live/c6eds/Canal_a/SA_Live_dash_cenc/Canal_a.mpd
+
+#EXTINF:-1 tvg-id="457" tvg-name="FILM&ARTS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/YqWH5MOe27rmrMF1Ch1q8w?tags=CH_LOGO",FILM&ARTS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=91c540d350f34f5386f3f1c77f74001f:54ee72810551da0cba0c45a8df651962
+https://chromecast.cvattv.com.ar/live/c6eds/Film_Arts/SA_Live_dash_cenc/Film_Arts.mpd
+
+#EXTINF:-1 tvg-id="458" tvg-name="H2" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/8xYgzdDte1mjpZ9hQTnCSg?tags=CH_LOGO",H2
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=ecbe97ec34784304b390a12ba3854ccf:5a0ee36ed9b8920cb19546fd92f2d415
+https://chromecast.cvattv.com.ar/live/c6eds/History_2/SA_Live_dash_cenc/History_2.mpd
+
+#EXTINF:-1 tvg-id="460" tvg-name="DISCOVERY WORLD HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Fz_YwSm3N0JTYBmt1pwEJA?tags=CH_LOGO",DISCOVERY WORLD HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=34ee94c2263345f7a3a590661264e490:56757d656a697ab7a2e5e083b5d21bb5
+https://chromecast.cvattv.com.ar/live/c6eds/Discovery_World_HD/SA_Live_dash_cenc/Discovery_World_HD.mpd
+
+#EXTINF:-1 tvg-id="462" tvg-name="DISCOVERY SCIENCE" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/bPn-aBUgxpA0FNYgsVIkyw?tags=CH_LOGO",DISCOVERY SCIENCE
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=46ba409fb04e40fb86b466d97e3a9588:f129fb9b5d213e20e2abe529b8cf2597
+https://chromecast.cvattv.com.ar/live/c6eds/Discovery_Science/SA_Live_dash_cenc/Discovery_Science.mpd
+
+#EXTINF:-1 tvg-id="500" tvg-name="MTV HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/n04YtKT8WwRPjAfxJC6FTA?tags=CH_LOGO",MTV HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0c9eb3ead38a122ac460ad96a8ebfd2e:66bfbfa4449eb8bc1bcf7577d5bffaad
+https://chromecast.cvattv.com.ar/live/c6eds/MTV_HD/SA_Live_dash_cenc/MTV_HD.mpd
+
+#EXTINF:-1 tvg-id="501" tvg-name="QUIERO HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/pWSGmQ4yaCOlkok_QtzNWQ?tags=CH_LOGO",QUIERO HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=a354b0c82a3a720c4a6f52ed5a1190f4:45a76dcc84f058cfabc8b958d7303b28
+https://chromecast.cvattv.com.ar/live/c6eds/Quiero_HD/SA_Live_dash_cenc/Quiero_HD.mpd
+
+#EXTINF:-1 tvg-id="502" tvg-name="VORTERIX" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Vqfw5SS8gWr332vJUn6aKQ?tags=CH_LOGO",VORTERIX
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=eabe2c22350c26c7f0ad84b34932f08d:39fa06836ec0f81d8dd9b6e01a3070e3
+https://chromecast.cvattv.com.ar/live/c6eds/Vorterix/SA_Live_dash_cenc/Vorterix.mpd
+
+#EXTINF:-1 tvg-id="503" tvg-name="ALLEGRO HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Mpn70pqyaDdZN60vclCdHw?tags=CH_LOGO",ALLEGRO HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e55e61b81b992d6c21466891d72157e9:566d341bf7209a88976e75c20ad7aca2
+https://chromecast.cvattv.com.ar/live/c7eds/AllegroHD/SA_Live_dash_cenc/AllegroHD.mpd
+
+#EXTINF:-1 tvg-id="505" tvg-name="HTV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Unbb9QNr6O9YHLpAaTWiqA?tags=CH_LOGO",HTV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=daecef5fe32f4ce083c6a0c692755d6a:d4227f24389a9ba77293214b93eb0d7d
+https://chromecast.cvattv.com.ar/live/c6eds/HTV/SA_Live_dash_cenc/HTV.mpd
+
+#EXTINF:-1 tvg-id="507" tvg-name="CANAL DE LA MUSICA" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/DyFeQKP1Eu7y5o0Tk1oKfQ?tags=CH_LOGO",CANAL DE LA MUSICA
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=682f36b5736f4560951ca14b80d29524:3accb729067a39b3b8143f1b447b9d25
+https://chromecast.cvattv.com.ar/live/c6eds/CM/SA_Live_dash_cenc/CM.mpd
+
+#EXTINF:-1 tvg-id="515" tvg-name="CANAL DE LA CIUDAD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/vBERBHBQYXv56ZDZa11SKw?tags=CH_LOGO",CANAL DE LA CIUDAD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5ee7842b3cf24d1dba088365fa5d0543:69cec006409823c06fbf2866a231b4f7
+https://chromecast.cvattv.com.ar/live/c6eds/Canal_de_la_ciudad/SA_Live_dash_cenc/Canal_de_la_ciudad.mpd
+
+#EXTINF:-1 tvg-id="519" tvg-name="SOMOS LA PLATA HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/tzLGU8-aMvPeEPi5m4hZIA?tags=CH_LOGO",SOMOS LA PLATA HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=bffd3b447aa44a429a703245836e46fa:13be31c0bcb76b28b1248bf64ab3926e
+https://chromecast.cvattv.com.ar/live/c6eds/Somos_La_Plata/SA_Live_dash_cenc/Somos_La_Plata.mpd
+
+#EXTINF:-1 tvg-id="520" tvg-name="SOMOS ROSARIO HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/7Uu7sz_9SiNKTuY1bTQEMw?tags=CH_LOGO",SOMOS ROSARIO HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=863ed7f26cf51850b9ed735545c788ce:789edf190d78baefb569e8ca09ac86c2
+https://chromecast.cvattv.com.ar/live/c5eds/Somos_Rosario/SA_Live_dash_cenc/Somos_Rosario.mpd
+
+#EXTINF:-1 tvg-id="523" tvg-name="SOMOS SALTA-JUJUY HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/o3tfT4Afbru-COHdH-gCNQ?tags=CH_LOGO",SOMOS SALTA-JUJUY HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9879546bcfd8a4231ce7502062f424fb:e071693afea3e58f8b28bf5b2311e3fc
+https://chromecast.cvattv.com.ar/live/c4eds/Somos_Salta/SA_Live_dash_cenc/Somos_Salta.mpd
+
+#EXTINF:-1 tvg-id="525" tvg-name="SOMOS MAR DEL PLATA NECOCHEA HD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/9yXd1aZ9I6d6puZ18YfrfA?tags=CH_LOGO",SOMOS MAR DEL PLATA NECOCHEA HD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b57763b8d9c205d609ea509432201fac:a476cf79190fe4810efdd81e32317ff3
+https://chromecast.cvattv.com.ar/live/c4eds/Canal_Ciudad_MDQ/SA_Live_dash_cenc/Canal_Ciudad_MDQ.mpd
+
+#EXTINF:-1 tvg-id="526" tvg-name="SOMOS EL VALLE" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/17XA6KOFNps53PTMQcs6Cg?tags=CH_LOGO",SOMOS EL VALLE
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=513f2056bf40d9123918fd7939fbf065:075ee6dd9b67d88be5642eaa510e91cb
+https://chromecast.cvattv.com.ar/live/c4eds/Somos_El_Valle/SA_Live_dash_cenc/Somos_El_Valle.mpd
+
+#EXTINF:-1 tvg-id="539" tvg-name="CANAL C" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/qn2fGudXk85ifaXBwdGJVg?tags=CH_LOGO",CANAL C
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9a866ca98bef2351a68e4843139f8073:b0893077653d1ef842a1b65d8b34455a
+https://chromecast.cvattv.com.ar/live/c5eds/Canal_C/SA_Live_dash_cenc/Canal_C.mpd
+
+#EXTINF:-1 tvg-id="544" tvg-name="CANAL UNIVERSIDAD DE LA PLATA" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/T-InitKP2cC1d-dputUYlQ?tags=CH_LOGO",CANAL UNIVERSIDAD DE LA PLATA
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=93c40cee58a5f415828cc32d0c80d311:d00906d71ee69515cd4dca1162d5ae7f
+https://chromecast.cvattv.com.ar/live/c3eds/Canal_Universidad/SA_Live_dash_cenc/Canal_Universidad.mpd
+
+#EXTINF:-1 tvg-id="548" tvg-name="RAFAELA NOTICIAS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/zRxUTAv9gO-t06viyDCiNw?tags=CH_LOGO",RAFAELA NOTICIAS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=7071b5b3283cebd376d1ba9c6e53ba6e:87a6c4c8baaefb073270e92f092b4c25
+https://chromecast.cvattv.com.ar/live/c4eds/Somos_Rafaela/SA_Live_dash_cenc/Somos_Rafaela.mpd
+
+#EXTINF:-1 tvg-id="551" tvg-name="RAI" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/QpZNmvX6uNlMLfxFfQXUSA?tags=CH_LOGO",RAI
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d214547d7d9a4011a39a899ce6e70071:16c2ed0617cf1e123f3af6ea8875a82d
+https://chromecast.cvattv.com.ar/live/c6eds/RAI/SA_Live_dash_cenc/RAI.mpd
+
+#EXTINF:-1 tvg-id="552" tvg-name="BLOOMBERG" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/sneT6XQFQmrTx28ARJZS_g?tags=CH_LOGO",BLOOMBERG
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=1e50891cdc64452aae20d049727f2f3f:551871ba1dc6a95597ec0cb82eb3b2a4
+https://chromecast.cvattv.com.ar/live/c3eds/Bloomberg/SA_Live_dash_cenc/Bloomberg.mpd
+
+#EXTINF:-1 tvg-id="553" tvg-name="TVN CHILE" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/L2pn69bAkJPMfUI3x8d3YQ?tags=CH_LOGO",TVN CHILE
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c5d0d76e24844235988f9265619e5fec:446b71a6deb806c6f129e25de999d07c
+https://chromecast.cvattv.com.ar/live/c6eds/Tv_Chile/SA_Live_dash_cenc/Tv_Chile.mpd
+
+#EXTINF:-1 tvg-id="554" tvg-name="TV 5" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/rKKf3caQaDIMFqxm_JKunA?tags=CH_LOGO",TV 5
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=62034ff5988b4787b17cdf6f751a3142:b3938f0af28b4c0c082b0d4210e389a0
+https://chromecast.cvattv.com.ar/live/c6eds/TV5_Monde/SA_Live_dash_cenc/TV5_Monde.mpd
+
+#EXTINF:-1 tvg-id="555" tvg-name="ANTENA3" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/vjeZtoj2vIp-Z4fd0MlAcA?tags=CH_LOGO",ANTENA3
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=1e1ad422a6714482b66fa702c16e50c6:4fdf28a0ab91356ca55a75f4e9bf8c92
+https://chromecast.cvattv.com.ar/live/c6eds/Antena_3/SA_Live_dash_cenc/Antena_3.mpd
+
+#EXTINF:-1 tvg-id="556" tvg-name="TELESUR" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/0tmbPj9PZJl6dbFzK03j9A?tags=CH_LOGO",TELESUR
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=5235d8ee29f14ce6b26ea5d828aee77a:6bf6bd339e3098babc2ab0b984cd2376
+https://chromecast.cvattv.com.ar/live/c6eds/Telesur/SA_Live_dash_cenc/Telesur.mpd
+
+#EXTINF:-1 tvg-id="557" tvg-name="CNN" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/w3E4muhaVmGz8sUB8zgF4w?tags=CH_LOGO",CNN
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=9f24708ad1184ee3a04b650941f9894b:e5bc7c5ff392119423dbf1c023a7b21c
+https://chromecast.cvattv.com.ar/live/c6eds/CNN_Internacional/SA_Live_dash_cenc/CNN_Internacional.mpd
+
+#EXTINF:-1 tvg-id="558" tvg-name="BBC WORLD" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/hW1aw2LaWthLw8bmFqa0yg?tags=CH_LOGO",BBC WORLD
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=019f72f2091d4cbea59ff8c85b117f86:a4eac51195506752f9f63ad24def9c37
+https://chromecast.cvattv.com.ar/live/c6eds/BBC_World_News/SA_Live_dash_cenc/BBC_World_News.mpd
+
+#EXTINF:-1 tvg-id="559" tvg-name="FOX NEWS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/AqC-VaDLCCwqJr-c5OuXhg?tags=CH_LOGO",FOX NEWS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=3fe3f31a5e7b48a1b548e9364757ce66:32993fc281207fe915f6f1e990957868
+https://chromecast.cvattv.com.ar/live/c6eds/Fox_News/SA_Live_dash_cenc/Fox_News.mpd
+
+#EXTINF:-1 tvg-id="560" tvg-name="AL JAZEERA" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/7mNu1_uW2plBUKIT0mE2rg?tags=CH_LOGO",AL JAZEERA
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=137a1a70fa118b695118a3aad9485b13:7c35ca36d4452dfa03d88725a0d16105
+https://chromecast.cvattv.com.ar/live/c7eds/Alljazzera/SA_Live_dash_cenc/Alljazzera.mpd
+
+#EXTINF:-1 tvg-id="561" tvg-name="EURONEWS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/XTLFR-6VygwIKTKGiHI9aQ?tags=CH_LOGO",EURONEWS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=d86b0f56d32f45adb0a6b4e488c8f0c2:e4f180b0e61be3e80ab602df5e56ff3f
+https://chromecast.cvattv.com.ar/live/c6eds/Euronews/SA_Live_dash_cenc/Euronews.mpd
+
+#EXTINF:-1 tvg-id="562" tvg-name="DEUTSCHE WELLE" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/O_-a0280xePeyTh4IxQAEQ?tags=CH_LOGO",DEUTSCHE WELLE
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=e21fc12c6ee185fbc90a052b05026be9:0f96fd52903707aac0b42853a043ffd0
+https://chromecast.cvattv.com.ar/live/c6eds/DW/SA_Live_dash_cenc/DW.mpd
+
+#EXTINF:-1 tvg-id="563" tvg-name="TVE" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/G1n9QBaEFBFfEvhrX7joug?tags=CH_LOGO",TVE
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=53e0a3741e2e4ff5843f165b53309088:45095caabd9a359cd7ea3910d865d643
+https://chromecast.cvattv.com.ar/live/c6eds/TV_Espana/SA_Live_dash_cenc/TV_Espana.mpd
+
+#EXTINF:-1 tvg-id="564" tvg-name="GALICIA TV" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/qlzSqPcLIlK-q_66GEAdjQ?tags=CH_LOGO",GALICIA TV
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=23419f2a0a214038a94e24db13ee85a9:4c627ad6b8774e548e28d4aaf82a96a0
+https://chromecast.cvattv.com.ar/live/c6eds/Tv_Galicia/SA_Live_dash_cenc/Tv_Galicia.mpd
+
+#EXTINF:-1 tvg-id="565" tvg-name="CANAL DE LAS ESTRELLAS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/_kgmFqamO2LVQh4NrsRpjA?tags=CH_LOGO",CANAL DE LAS ESTRELLAS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b37d85be9d2b4b619f945beff713fda3:917309c98f072b0bd484dd6560c6d166
+https://chromecast.cvattv.com.ar/live/c6eds/Canal_de_las_estrellas/SA_Live_dash_cenc/Canal_de_las_estrellas.mpd
+
+#EXTINF:-1 tvg-id="566" tvg-name="ARIRANG" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/cLWixsa-M8SAPsPUbrUH_A?tags=CH_LOGO",ARIRANG
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=436d78a75fad9bdcc6d409640c116a62:c77471ac3b694513a9c5ff68b8d4fac5
+https://chromecast.cvattv.com.ar/live/c7eds/Arirang/SA_Live_dash_cenc/Arirang.mpd
+
+#EXTINF:-1 tvg-id="567" tvg-name="UCL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/FZLcXJmjocdsRvGi3AIQtA?tags=CH_LOGO",UCL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=202a19e4871c4739a8010aa7b25af37d:07015b4cfa048a3351b83d60aeca5ead
+https://chromecast.cvattv.com.ar/live/c3eds/Canal_U/SA_Live_dash_cenc/Canal_U.mpd
+
+#EXTINF:-1 tvg-id="568" tvg-name="FRANCE 24" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/RPnsRnCSAXf30_8zPJvt2A?tags=CH_LOGO",FRANCE 24
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=72187f2651724db18505cdcad435841d:6f41e05476e34edf7bb9dc51f08f95df
+https://chromecast.cvattv.com.ar/live/c6eds/France_24/SA_Live_dash_cenc/France_24.mpd
+
+#EXTINF:-1 tvg-id="569" tvg-name="NEW BRASIL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/d_FcWASM1xgeCZK84K38Tw?tags=CH_LOGO",NEW BRASIL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=0b4f56d5c19b45fb3e75a73b6ec06e6c:c464e2b6ded2b52e1e7753b3a859abce
+https://chromecast.cvattv.com.ar/live/c7eds/Bandeirantes/SA_Live_dash_cenc/Bandeirantes.mpd
+
+#EXTINF:-1 tvg-id="570" tvg-name="D NEWS" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/kh2tCx9k5O1X6VJZe5TKLg?tags=CH_LOGO",D NEWS
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=21563d82cfb7fdd18b213f0bd92a274f:5940d8d0b57b9e6533e99cc0e7bf2f8e
+https://chromecast.cvattv.com.ar/live/c7eds/DNews/SA_Live_dash_cenc/DNews.mpd
+
+#EXTINF:-1 tvg-id="571" tvg-name="CANAL E" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Fy-2q6VPYhYqBFQjQa1J6g?tags=CH_LOGO",CANAL E
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=a90bb668a24e636ff6059c16d9fbf943:a92d992c2777e81a2e7ae3225ae1c032
+https://cdn.cvattv.com.ar/live/c7eds/Canal_Economico/SA_Live_dash_cenc/Canal_Economico.mpd
+
+#EXTINF:-1 tvg-id="573" tvg-name="ARGENTINISIMA SATELITAL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/Z_gG2HqVfQHEE4qXN_cDLA?tags=CH_LOGO",ARGENTINISIMA SATELITAL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=a6243f46366445ebbf3117ec27365481:81667cdc3bcf19a6a66c0919fa00a20b
+https://chromecast.cvattv.com.ar/live/c6eds/Argentinisima/SA_Live_dash_cenc/Argentinisima.mpd
+
+#EXTINF:-1 tvg-id="575" tvg-name="FRANCE 24 ESPAÑOL" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/0MsnvBPVQqPt3anDcHVdpA?tags=CH_LOGO",FRANCE 24 ESPAÑOL
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=c8a3d29db38c4a9fa9a838c3d4d681db:d3aa374c4c0de33f463b4387a18297a6
+https://cdn.cvattv.com.ar/live/c3eds/France24_Flow/SA_Live_dash_cenc/France24_Flow.mpd
+
+#EXTINF:-1 tvg-id="605" tvg-name="FLOW MUSIC" tvg-logo="https://cdn.bo.flow.com.ar/images/content/60/40/XEGMxKKr1qJpAOuMAUKKoA?tags=CH_LOGO",FLOW MUSIC
+#EXTVLCOPT:http-origin=https://portal.app.flow.com.ar/
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=b2aae44a74144be8b2118e20d1412bab:8a7ae996d12d8d5d5637d1044f8e08b7
+https://chromecast.cvattv.com.ar/live/c7eds/Flow_Music_XP/SA_Live_dash_cenc/Flow_Music_XP.mpd
