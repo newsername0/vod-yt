@@ -497,23 +497,76 @@ def build_archive_video(
     else:
         created_at = "1970-01-01"
 
+    # Archive.org conserva la metadata original de la VOD.
+    # Preferimos recuperar el ID de Kick desde las keywords/subjects
+    # para que la VOD archivada sea exactamente la misma VOD a efectos
+    # de títulos, tags y detección de duplicados.
+    kick_vod_id = None
+
+    subject_values = metadata.get("subject") or []
+    if isinstance(subject_values, str):
+        subject_values = [subject_values]
+
+    for subject in subject_values:
+        match = re.fullmatch(
+            r"kick-vod-id:(.+)",
+            str(subject).strip(),
+            flags=re.IGNORECASE,
+        )
+        if match:
+            kick_vod_id = match.group(1).strip()
+            break
+
+    if kick_vod_id is None:
+        match = re.search(
+            r"kick-vod-id:(\S+)",
+            description,
+            flags=re.IGNORECASE,
+        )
+        if match:
+            kick_vod_id = match.group(1).strip()
+
+    if not kick_vod_id:
+        # Fallback solo para items antiguos que no conservaran el ID de Kick.
+        kick_vod_id = archive_info["identifier"]
+        print(
+            "ADVERTENCIA: el item de Archive.org no contiene "
+            "kick-vod-id:<ID>; se usará el identifier de Archive.org "
+            "como fallback: "
+            f"{kick_vod_id}"
+        )
+
+    # La descripción de Archive.org normalmente conserva exactamente
+    # las tres secciones que usa el flujo de Kick: título de sesión,
+    # fecha/hora de inicio y URL de origen.
+    description_parts = [
+        part.strip()
+        for part in re.split(r"\n\s*\n+", description.strip())
+        if part.strip()
+    ] if description.strip() else []
+
+    session_title = description_parts[0] if description_parts else title
+    start_time = description_parts[1] if len(description_parts) >= 2 else ""
+    source = description_parts[2] if len(description_parts) >= 3 else (
+        f"https://archive.org/details/{archive_info['identifier']}"
+    )
+
     return {
-        "id": f"archive-{archive_info['identifier']}",
+        "id": str(kick_vod_id),
         "created_at": created_at,
-        "session_title": description or title,
-        "start_time": "",
-        "source": (
-            f"https://archive.org/details/"
-            f"{archive_info['identifier']}"
-        ),
+        "session_title": session_title,
+        "start_time": start_time,
+        "source": source,
         "archive_description": description,
         "youtube_title": title,
+        "archive_identifier": archive_info["identifier"],
     }
 
 
 def process_manual_archive_vod(
     youtube,
     archive_url,
+    legacy_vod_ids,
     uploaded_part_tags,
 ):
     """
@@ -538,6 +591,13 @@ def process_manual_archive_vod(
     print(
         f"Procesando VOD manual de Archive.org: {identifier}"
     )
+
+    if video_id in legacy_vod_ids:
+        print(
+            f"La VOD de Kick {video_id} ya está subida a YouTube; "
+            "se omite la subida manual."
+        )
+        return True
 
     video_directory = (
         WORKSPACE
@@ -568,6 +628,18 @@ def process_manual_archive_vod(
         )
 
         total_parts = len(parts)
+
+        if has_complete_part_set(
+            video_id,
+            uploaded_part_tags,
+        ):
+            print(
+                f"La VOD {video_id} ya está completa en YouTube; "
+                "se omite la subida manual."
+            )
+            for existing_part in parts:
+                existing_part["path"].unlink(missing_ok=True)
+            return True
 
         for part in parts:
             part_number = part["part_number"]
@@ -1605,6 +1677,7 @@ def upload_video(
                     CHANNEL,
                     "Kick",
                     "VOD",
+                    f"kick-vod-id:{video['id']}",
                     part_tag,
                 ],
 
@@ -2066,6 +2139,7 @@ def main():
         processed = process_manual_archive_vod(
             youtube,
             ARCHIVE_URL,
+            legacy_vod_ids,
             uploaded_part_tags,
         )
 

@@ -139,9 +139,15 @@ Cuando `archive_url` tiene un valor:
 4. Se descarga el archivo al workspace del runner.
 5. Si supera `MAX_PART_DURATION_SECONDS`, se divide en partes `.ts` sin
    recodificar.
-6. Las partes se suben a YouTube usando el mismo sistema de etiquetas y
+6. La metadata se conserva con el mismo formato que el flujo normal de Kick:
+   título, descripción de tres bloques y etiquetas. Si Archive.org conserva
+   `kick-vod-id:<ID>`, se reutiliza exactamente ese ID original de Kick.
+7. Antes de descargar/subir, se comprueba si ese ID ya existe en los vídeos de
+   YouTube o si ya están publicadas todas sus partes; en ambos casos se omite
+   la VOD para evitar duplicados.
+8. Las partes se suben a YouTube usando el mismo sistema de etiquetas y
    reanudación del flujo normal.
-7. Los archivos temporales se eliminan al finalizar cada parte.
+9. Los archivos temporales se eliminan al finalizar cada parte.
 
 Cuando **archive_url** se deja vacío, el workflow mantiene exactamente el
 comportamiento anterior y procesa el VOD pendiente más antiguo de Kick.
