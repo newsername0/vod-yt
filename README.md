@@ -112,3 +112,37 @@ En `.github/workflows/upload-youtube.yml` puedes cambiar:
 El script conserva solamente una parte `.ts` a la vez. Si una parte aún resulta
 demasiado grande para el espacio disponible en el runner, reduce
 `MAX_PART_DURATION_SECONDS`, por ejemplo a `14400` para partes de 4 horas.
+
+## VOD manual desde Internet Archive
+
+El workflow `.github/workflows/upload-youtube.yml` también permite subir una VOD
+que ya fue archivada en Internet Archive aunque haya desaparecido de Kick.
+
+Al ejecutar manualmente la acción **Upload oldest VOD to YouTube**, aparece el
+campo **archive_url**. Pega una URL como:
+
+```text
+https://archive.org/details/vector-kick-vod-119757223
+```
+
+También se acepta una URL copiada desde la vista de código fuente:
+
+```text
+view-source:https://archive.org/details/vector-kick-vod-119757223
+```
+
+Cuando `archive_url` tiene un valor:
+
+1. No se consulta la API de VODs de Kick.
+2. Se obtiene la metadata pública del ítem de Internet Archive.
+3. Se localiza automáticamente el MP4 principal.
+4. Se descarga el archivo al workspace del runner.
+5. Si supera `MAX_PART_DURATION_SECONDS`, se divide en partes `.ts` sin
+   recodificar.
+6. Las partes se suben a YouTube usando el mismo sistema de etiquetas y
+   reanudación del flujo normal.
+7. Los archivos temporales se eliminan al finalizar cada parte.
+
+Cuando **archive_url** se deja vacío, el workflow mantiene exactamente el
+comportamiento anterior y procesa el VOD pendiente más antiguo de Kick.
+

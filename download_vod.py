@@ -10,7 +10,7 @@ import subprocess
 import time
 import urllib.request
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin, urlparse
 
 import httplib2
 import m3u8
@@ -53,6 +53,13 @@ MAX_PART_DURATION_SECONDS = int(
         str(11 * 60 * 60 + 50 * 60),
     )
 )
+
+# URL opcional de una VOD ya archivada en Internet Archive.
+# Cuando está presente, se omite la API de Kick y se procesa esa VOD.
+ARCHIVE_URL = os.environ.get(
+    "ARCHIVE_URL",
+    "",
+).strip()
 
 
 HTTP_HEADERS = {
@@ -140,6 +147,482 @@ def build_youtube_client():
         credentials=credentials,
         cache_discovery=False,
     )
+
+
+def normalize_archive_url(url):
+    """
+    Acepta URLs normales de Archive.org y URLs copiadas como
+    view-source:https://archive.org/details/<identifier>.
+    """
+    value = (url or "").strip()
+
+    if value.startswith("view-source:"):
+        value = value[len("view-source:"):]
+
+    parsed = urlparse(value)
+
+    if parsed.scheme not in {"http", "https"}:
+        raise RuntimeError(
+            "ARCHIVE_URL debe ser una URL http(s) de Internet Archive."
+        )
+
+    if parsed.netloc.lower() not in {"archive.org", "www.archive.org"}:
+        raise RuntimeError(
+            "ARCHIVE_URL debe apuntar a archive.org."
+        )
+
+    return value
+
+
+def get_archive_identifier(url):
+    """
+    Obtiene el identifier de /details/<identifier> o de la URL equivalente.
+    """
+    normalized = normalize_archive_url(url)
+    path = urlparse(normalized).path.strip("/")
+
+    parts = path.split("/")
+    if len(parts) < 2 or parts[0] != "details" or not parts[1]:
+        raise RuntimeError(
+            "ARCHIVE_URL debe tener el formato "
+            "https://archive.org/details/<identifier>."
+        )
+
+    return parts[1]
+
+
+def fetch_archive_item(identifier):
+    """
+    Consulta la metadata pública de Internet Archive y localiza el MP4
+    principal de la VOD.
+    """
+    metadata_url = (
+        "https://archive.org/metadata/"
+        f"{identifier}"
+    )
+
+    request = urllib.request.Request(
+        metadata_url,
+        headers=HTTP_HEADERS,
+    )
+
+    with urllib.request.urlopen(
+        request,
+        timeout=60,
+    ) as response:
+        data = json.load(response)
+
+    files = data.get("files") or []
+
+    candidates = []
+    for file_info in files:
+        if not isinstance(file_info, dict):
+            continue
+
+        name = str(file_info.get("name") or "")
+        lower_name = name.lower()
+
+        if (
+            lower_name.endswith(".mp4")
+            and str(file_info.get("private", "")).lower()
+            != "true"
+        ):
+            candidates.append(file_info)
+
+    if not candidates:
+        raise RuntimeError(
+            f"No se encontró ningún MP4 público en Archive.org para "
+            f"{identifier}."
+        )
+
+    def candidate_score(file_info):
+        name = str(file_info.get("name") or "")
+        lower_name = name.lower()
+
+        score = 0
+
+        if lower_name == f"{identifier}.mp4":
+            score += 100
+
+        if "vod" in lower_name:
+            score += 20
+
+        if file_info.get("source") == "original":
+            score += 10
+
+        try:
+            score += int(file_info.get("size") or 0) // (1024**3)
+        except (TypeError, ValueError):
+            pass
+
+        return score
+
+    selected = max(
+        candidates,
+        key=candidate_score,
+    )
+
+    file_name = str(selected["name"])
+
+    download_url = (
+        "https://archive.org/download/"
+        f"{quote(identifier, safe='')}/"
+        f"{quote(file_name, safe='/')}"
+    )
+
+    return {
+        "identifier": identifier,
+        "file_name": file_name,
+        "download_url": download_url,
+        "metadata": data.get("metadata") or {},
+    }
+
+
+def download_archive_vod(
+    archive_info,
+    output_path,
+):
+    """
+    Descarga el archivo multimedia original desde Internet Archive.
+    """
+    request = urllib.request.Request(
+        archive_info["download_url"],
+        headers=HTTP_HEADERS,
+    )
+
+    print(
+        "Descargando VOD desde Internet Archive:"
+    )
+    print(
+        archive_info["download_url"]
+    )
+
+    with urllib.request.urlopen(
+        request,
+        timeout=120,
+    ) as response, open(
+        output_path,
+        "wb",
+    ) as output_file:
+        while True:
+            chunk = response.read(8 * 1024 * 1024)
+            if not chunk:
+                break
+            output_file.write(chunk)
+
+    if not output_path.exists() or output_path.stat().st_size == 0:
+        raise RuntimeError(
+            "La descarga desde Internet Archive produjo un archivo vacío."
+        )
+
+
+def probe_duration(video_path):
+    """
+    Obtiene la duración con ffprobe.
+    """
+    result = subprocess.run(
+        [
+            "ffprobe",
+            "-v",
+            "error",
+            "-show_entries",
+            "format=duration",
+            "-of",
+            "default=noprint_wrappers=1:nokey=1",
+            str(video_path),
+        ],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+
+    try:
+        duration = float(result.stdout.strip())
+    except ValueError as error:
+        raise RuntimeError(
+            f"No se pudo determinar la duración de {video_path}."
+        ) from error
+
+    if duration <= 0:
+        raise RuntimeError(
+            f"La duración de {video_path} no es válida."
+        )
+
+    return duration
+
+
+def split_archive_vod(
+    source_path,
+    output_directory,
+):
+    """
+    Divide una VOD archivada en partes TS sin recodificar.
+    Devuelve las rutas creadas.
+    """
+    duration = probe_duration(source_path)
+    total_parts = max(
+        1,
+        math.ceil(
+            duration / MAX_PART_DURATION_SECONDS
+        ),
+    )
+
+    print(
+        f"Duración de la VOD de Archive.org: "
+        f"{format_seconds(duration)}. "
+        f"Se generarán {total_parts} parte(s)."
+    )
+
+    if total_parts == 1:
+        destination = output_directory / "part_01_of_01.ts"
+
+        subprocess.run(
+            [
+                "ffmpeg",
+                "-i",
+                str(source_path),
+                "-map",
+                "0",
+                "-c",
+                "copy",
+                "-y",
+                str(destination),
+            ],
+            check=True,
+        )
+
+        return [
+            {
+                "path": destination,
+                "part_number": 1,
+                "total_parts": 1,
+            }
+        ]
+
+    part_paths = []
+
+    for part_number in range(1, total_parts + 1):
+        destination = (
+            output_directory
+            /
+            f"part_{part_number:02d}_of_{total_parts:02d}.ts"
+        )
+
+        start = (
+            part_number - 1
+        ) * MAX_PART_DURATION_SECONDS
+
+        remaining = duration - start
+        part_duration = min(
+            MAX_PART_DURATION_SECONDS,
+            remaining,
+        )
+
+        print(
+            f"Generando parte {part_number}/{total_parts}: "
+            f"{format_seconds(part_duration)}."
+        )
+
+        subprocess.run(
+            [
+                "ffmpeg",
+                "-ss",
+                str(start),
+                "-i",
+                str(source_path),
+                "-t",
+                str(part_duration),
+                "-map",
+                "0",
+                "-c",
+                "copy",
+                "-y",
+                str(destination),
+            ],
+            check=True,
+        )
+
+        part_paths.append(
+            {
+                "path": destination,
+                "part_number": part_number,
+                "total_parts": total_parts,
+            }
+        )
+
+    return part_paths
+
+
+def build_archive_video(
+    archive_info,
+):
+    """
+    Construye un objeto compatible con el resto del flujo de YouTube.
+    """
+    metadata = archive_info.get("metadata") or {}
+
+    title = str(
+        metadata.get("title")
+        or archive_info["identifier"]
+    )
+
+    description = str(
+        metadata.get("description")
+        or ""
+    )
+
+    date_value = str(
+        metadata.get("date")
+        or metadata.get("year")
+        or ""
+    )
+
+    match = re.search(
+        r"(\d{4}-\d{2}-\d{2})",
+        date_value,
+    )
+
+    if not match:
+        match = re.search(
+            r"(\d{2})/(\d{2})/(\d{4})",
+            title,
+        )
+
+    if match:
+        if len(match.groups()) == 1:
+            created_at = match.group(1)
+        else:
+            day, month, year = match.groups()
+            created_at = f"{year}-{month}-{day}"
+    else:
+        created_at = "1970-01-01"
+
+    return {
+        "id": f"archive-{archive_info['identifier']}",
+        "created_at": created_at,
+        "session_title": description or title,
+        "start_time": "",
+        "source": (
+            f"https://archive.org/details/"
+            f"{archive_info['identifier']}"
+        ),
+        "archive_description": description,
+        "youtube_title": title,
+    }
+
+
+def process_manual_archive_vod(
+    youtube,
+    archive_url,
+    uploaded_part_tags,
+):
+    """
+    Ruta manual: descarga una VOD de Internet Archive y la sube a YouTube.
+    """
+    identifier = get_archive_identifier(
+        archive_url
+    )
+
+    archive_info = fetch_archive_item(
+        identifier
+    )
+
+    video = build_archive_video(
+        archive_info
+    )
+
+    video_id = str(
+        video["id"]
+    )
+
+    print(
+        f"Procesando VOD manual de Archive.org: {identifier}"
+    )
+
+    video_directory = (
+        WORKSPACE
+        /
+        f"archive_{identifier}"
+    )
+
+    video_directory.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    source_path = (
+        video_directory
+        /
+        archive_info["file_name"]
+    )
+
+    download_archive_vod(
+        archive_info,
+        source_path,
+    )
+
+    try:
+        parts = split_archive_vod(
+            source_path,
+            video_directory,
+        )
+
+        total_parts = len(parts)
+
+        for part in parts:
+            part_number = part["part_number"]
+
+            part_tag = make_part_tag(
+                video_id,
+                part_number,
+                total_parts,
+            )
+
+            if part_tag in uploaded_part_tags:
+                print(
+                    f"La parte {part_number}/{total_parts} ya existe; se omite."
+                )
+                part["path"].unlink(
+                    missing_ok=True
+                )
+                continue
+
+            try:
+                _, uploaded_tag = upload_video(
+                    youtube,
+                    video,
+                    part["path"],
+                    part_number,
+                    total_parts,
+                )
+
+                uploaded_part_tags.add(
+                    uploaded_tag
+                )
+
+                if part_number < total_parts:
+                    print(
+                        f"Parte {part_number}/{total_parts} subida. "
+                        f"Esperando {UPLOAD_PAUSE_SECONDS} segundos "
+                        f"antes de continuar..."
+                    )
+
+                    time.sleep(
+                        UPLOAD_PAUSE_SECONDS
+                    )
+
+            finally:
+                part["path"].unlink(
+                    missing_ok=True
+                )
+
+        return True
+
+    finally:
+        source_path.unlink(
+            missing_ok=True
+        )
+
 
 def get_uploaded_markers(youtube):
     """
@@ -1037,8 +1520,11 @@ def build_video_metadata(
     )
 
 
-    base_title = (
-        f"{channel_name} | {formatted_date}"
+    base_title = str(
+        video.get(
+            "youtube_title"
+        )
+        or f"{channel_name} | {formatted_date}"
     )
 
 
@@ -1097,6 +1583,13 @@ def upload_video(
 
 
 
+    upload_mimetype = (
+        "video/mp4"
+        if video_path.suffix.lower() == ".mp4"
+        else "video/mp2t"
+    )
+
+
     insert_request = youtube.videos().insert(
         part="snippet,status",
 
@@ -1127,7 +1620,7 @@ def upload_video(
         media_body=MediaFileUpload(
             str(video_path),
 
-            mimetype="video/mp2t",
+            mimetype=upload_mimetype,
 
             chunksize=8 * 1024 * 1024,
 
@@ -1569,32 +2062,36 @@ def main():
     )
 
 
+    if ARCHIVE_URL:
+        processed = process_manual_archive_vod(
+            youtube,
+            ARCHIVE_URL,
+            uploaded_part_tags,
+        )
 
-    videos = get_kick_videos()
+    else:
+        videos = get_kick_videos()
 
 
+        (
+            WORKSPACE
+            / "videos.json"
+        ).write_text(
+            json.dumps(
+                videos,
+                ensure_ascii=False,
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
 
-    (
-        WORKSPACE
-        / "videos.json"
-    ).write_text(
-        json.dumps(
+
+        processed = process_oldest_pending_video(
+            youtube,
             videos,
-            ensure_ascii=False,
-            indent=2,
-        ),
-        encoding="utf-8",
-    )
-
-
-
-    processed = process_oldest_pending_video(
-        youtube,
-        videos,
-        legacy_vod_ids,
-        uploaded_part_tags,
-    )
-
+            legacy_vod_ids,
+            uploaded_part_tags,
+        )
 
 
     if not processed:
