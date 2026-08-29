@@ -193,8 +193,8 @@ def get_archive_identifier(url):
 
 def fetch_archive_item(identifier):
     """
-    Consulta la metadata pública de Internet Archive y localiza el MP4
-    principal de la VOD.
+    Consulta la metadata pública de Internet Archive y localiza el TS
+    principal de la VOD. La ruta manual no usa MP4.
     """
     metadata_url = (
         "https://archive.org/metadata/"
@@ -223,7 +223,7 @@ def fetch_archive_item(identifier):
         lower_name = name.lower()
 
         if (
-            lower_name.endswith(".mp4")
+            lower_name.endswith(".ts")
             and str(file_info.get("private", "")).lower()
             != "true"
         ):
@@ -231,7 +231,7 @@ def fetch_archive_item(identifier):
 
     if not candidates:
         raise RuntimeError(
-            f"No se encontró ningún MP4 público en Archive.org para "
+            f"No se encontró ningún archivo TS público en Archive.org para "
             f"{identifier}."
         )
 
@@ -241,7 +241,7 @@ def fetch_archive_item(identifier):
 
         score = 0
 
-        if lower_name == f"{identifier}.mp4":
+        if lower_name == f"{identifier}.ts":
             score += 100
 
         if "vod" in lower_name:
@@ -283,7 +283,7 @@ def download_archive_vod(
     output_path,
 ):
     """
-    Descarga el archivo multimedia original desde Internet Archive.
+    Descarga el archivo MPEG-TS original desde Internet Archive.
     """
     request = urllib.request.Request(
         archive_info["download_url"],
@@ -291,7 +291,7 @@ def download_archive_vod(
     )
 
     print(
-        "Descargando VOD desde Internet Archive:"
+        "Descargando VOD TS desde Internet Archive:"
     )
     print(
         archive_info["download_url"]
@@ -312,7 +312,7 @@ def download_archive_vod(
 
     if not output_path.exists() or output_path.stat().st_size == 0:
         raise RuntimeError(
-            "La descarga desde Internet Archive produjo un archivo vacío."
+            "La descarga TS desde Internet Archive produjo un archivo vacío."
         )
 
 
