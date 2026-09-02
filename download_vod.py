@@ -10,7 +10,7 @@ import subprocess
 import time
 import urllib.request
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin, urlparse
 
 import httplib2
 import m3u8
@@ -53,6 +53,13 @@ MAX_PART_DURATION_SECONDS = int(
         str(11 * 60 * 60 + 50 * 60),
     )
 )
+
+# URL opcional de una VOD ya archivada en Internet Archive.
+# Cuando está presente, se omite la API de Kick y se procesa esa VOD.
+ARCHIVE_URL = os.environ.get(
+    "ARCHIVE_URL",
+    "",
+).strip()
 
 
 HTTP_HEADERS = {
@@ -140,6 +147,686 @@ def build_youtube_client():
         credentials=credentials,
         cache_discovery=False,
     )
+
+
+def normalize_archive_url(url):
+    """
+    Acepta URLs normales de Archive.org y URLs copiadas como
+    view-source:https://archive.org/details/<identifier>.
+    """
+    value = (url or "").strip()
+
+    if value.startswith("view-source:"):
+        value = value[len("view-source:"):]
+
+    parsed = urlparse(value)
+
+    if parsed.scheme not in {"http", "https"}:
+        raise RuntimeError(
+            "ARCHIVE_URL debe ser una URL http(s) de Internet Archive."
+        )
+
+    if parsed.netloc.lower() not in {"archive.org", "www.archive.org"}:
+        raise RuntimeError(
+            "ARCHIVE_URL debe apuntar a archive.org."
+        )
+
+    return value
+
+
+def get_archive_identifier(url):
+    """
+    Obtiene el identifier de /details/<identifier> o de la URL equivalente.
+    """
+    normalized = normalize_archive_url(url)
+    path = urlparse(normalized).path.strip("/")
+
+    parts = path.split("/")
+    if len(parts) < 2 or parts[0] != "details" or not parts[1]:
+        raise RuntimeError(
+            "ARCHIVE_URL debe tener el formato "
+            "https://archive.org/details/<identifier>."
+        )
+
+    return parts[1]
+
+
+def fetch_archive_item(identifier):
+    """
+    Consulta la metadata pública de Internet Archive y localiza el TS
+    principal de la VOD. La ruta manual no usa MP4.
+    """
+    metadata_url = (
+        "https://archive.org/metadata/"
+        f"{identifier}"
+    )
+
+    request = urllib.request.Request(
+        metadata_url,
+        headers=HTTP_HEADERS,
+    )
+
+    with urllib.request.urlopen(
+        request,
+        timeout=60,
+    ) as response:
+        data = json.load(response)
+
+    files = data.get("files") or []
+
+    candidates = []
+    for file_info in files:
+        if not isinstance(file_info, dict):
+            continue
+
+        name = str(file_info.get("name") or "")
+        lower_name = name.lower()
+
+        if (
+            lower_name.endswith(".ts")
+            and str(file_info.get("private", "")).lower()
+            != "true"
+        ):
+            candidates.append(file_info)
+
+    if not candidates:
+        raise RuntimeError(
+            f"No se encontró ningún archivo TS público en Archive.org para "
+            f"{identifier}."
+        )
+
+    def candidate_score(file_info):
+        name = str(file_info.get("name") or "")
+        lower_name = name.lower()
+
+        score = 0
+
+        if lower_name == f"{identifier}.ts":
+            score += 100
+
+        if "vod" in lower_name:
+            score += 20
+
+        if file_info.get("source") == "original":
+            score += 10
+
+        try:
+            score += int(file_info.get("size") or 0) // (1024**3)
+        except (TypeError, ValueError):
+            pass
+
+        return score
+
+    selected = max(
+        candidates,
+        key=candidate_score,
+    )
+
+    file_name = str(selected["name"])
+
+    download_url = (
+        "https://archive.org/download/"
+        f"{quote(identifier, safe='')}/"
+        f"{quote(file_name, safe='/')}"
+    )
+
+    return {
+        "identifier": identifier,
+        "file_name": file_name,
+        "download_url": download_url,
+        "metadata": data.get("metadata") or {},
+    }
+
+
+def download_archive_vod(
+    archive_info,
+    output_path,
+):
+    """
+    Descarga el archivo MPEG-TS original desde Internet Archive.
+    """
+    request = urllib.request.Request(
+        archive_info["download_url"],
+        headers=HTTP_HEADERS,
+    )
+
+    print(
+        "Descargando VOD TS desde Internet Archive:"
+    )
+    print(
+        archive_info["download_url"]
+    )
+
+    with urllib.request.urlopen(
+        request,
+        timeout=120,
+    ) as response, open(
+        output_path,
+        "wb",
+    ) as output_file:
+        while True:
+            chunk = response.read(8 * 1024 * 1024)
+            if not chunk:
+                break
+            output_file.write(chunk)
+
+    if not output_path.exists() or output_path.stat().st_size == 0:
+        raise RuntimeError(
+            "La descarga TS desde Internet Archive produjo un archivo vacío."
+        )
+
+
+def probe_duration(video_path):
+    """
+    Obtiene la duración con ffprobe.
+    """
+    result = subprocess.run(
+        [
+            "ffprobe",
+            "-v",
+            "error",
+            "-show_entries",
+            "format=duration",
+            "-of",
+            "default=noprint_wrappers=1:nokey=1",
+            str(video_path),
+        ],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+
+    try:
+        duration = float(result.stdout.strip())
+    except ValueError as error:
+        raise RuntimeError(
+            f"No se pudo determinar la duración de {video_path}."
+        ) from error
+
+    if duration <= 0:
+        raise RuntimeError(
+            f"La duración de {video_path} no es válida."
+        )
+
+    return duration
+
+
+def probe_archive_keyframes(video_path):
+    """
+    Obtiene timestamps de keyframes del TS archivado.
+
+    Un TS único no conserva necesariamente la lista HLS original.
+    En ese caso usamos keyframes como puntos de corte sin recodificar.
+    """
+    result = subprocess.run(
+        [
+            "ffprobe",
+            "-v",
+            "error",
+            "-select_streams",
+            "v:0",
+            "-skip_frame",
+            "nokey",
+            "-show_frames",
+            "-show_entries",
+            "frame=best_effort_timestamp_time",
+            "-of",
+            "csv=p=0",
+            str(video_path),
+        ],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+
+    timestamps = []
+
+    for line in result.stdout.splitlines():
+        value = line.strip().strip(",")
+
+        if not value:
+            continue
+
+        try:
+            timestamp = float(value)
+        except ValueError:
+            continue
+
+        if timestamp >= 0:
+            timestamps.append(timestamp)
+
+    if not timestamps:
+        raise RuntimeError(
+            "No se encontraron keyframes en la VOD TS de Archive.org."
+        )
+
+    # Eliminar duplicados y valores fuera de orden.
+    timestamps = sorted(
+        set(
+            round(timestamp, 6)
+            for timestamp in timestamps
+        )
+    )
+
+    duration = probe_duration(video_path)
+
+    # Mantener únicamente keyframes dentro del medio.
+    timestamps = [
+        timestamp
+        for timestamp in timestamps
+        if 0 <= timestamp < duration
+    ]
+
+    # Garantizar un punto inicial aproximadamente en 0.
+    if not timestamps or timestamps[0] > 0.05:
+        timestamps.insert(0, 0.0)
+    else:
+        timestamps[0] = 0.0
+
+    return timestamps, duration
+
+
+def build_archive_segment_objects(video_path):
+    """
+    Crea segmentos sintéticos basados en keyframes del TS.
+
+    Esto permite reutilizar exactamente build_balanced_segment_groups(),
+    que es la misma lógica usada por el flujo HLS de Kick.
+    """
+    timestamps, duration = probe_archive_keyframes(
+        video_path
+    )
+
+    segment_durations = []
+
+    for index in range(len(timestamps)):
+        start = timestamps[index]
+
+        if index + 1 < len(timestamps):
+            end = timestamps[index + 1]
+        else:
+            end = duration
+
+        segment_duration = end - start
+
+        if segment_duration > 0:
+            segment_durations.append(segment_duration)
+
+    if not segment_durations:
+        raise RuntimeError(
+            "No se pudieron construir segmentos temporales desde el TS."
+        )
+
+    class ArchiveSegment:
+        def __init__(self, duration):
+            self.duration = duration
+
+    segments = [
+        ArchiveSegment(duration)
+        for duration in segment_durations
+    ]
+
+    return segments, duration
+
+
+def split_archive_vod(
+    source_path,
+    output_directory,
+):
+    """
+    Divide una VOD TS usando la MISMA función de agrupación balanceada
+    del flujo original de Kick.
+
+    Importante:
+    - Nunca recodifica.
+    - Los cortes se hacen en keyframes.
+    - build_balanced_segment_groups() sigue siendo la función que decide
+      cómo distribuir las partes.
+    """
+    archive_segments, total_duration = (
+        build_archive_segment_objects(
+            source_path
+        )
+    )
+
+    groups, balanced_duration = (
+        build_balanced_segment_groups(
+            archive_segments,
+            MAX_PART_DURATION_SECONDS,
+        )
+    )
+
+    total_parts = len(groups)
+
+    print(
+        f"Duración de la VOD TS de Archive.org: "
+        f"{format_seconds(total_duration)}. "
+        f"Se generarán {total_parts} parte(s)."
+    )
+
+    # Reconstruimos los tiempos exactos de los segmentos sintéticos.
+    cumulative = [0.0]
+
+    for segment in archive_segments:
+        cumulative.append(
+            cumulative[-1]
+            + float(segment.duration)
+        )
+
+    part_paths = []
+
+    for part_number, group in enumerate(
+        groups,
+        start=1,
+    ):
+        destination = (
+            output_directory
+            /
+            (
+                f"part_{part_number:02d}_of_"
+                f"{total_parts:02d}.ts"
+            )
+        )
+
+        start_seconds = cumulative[
+            group["start"]
+        ]
+
+        end_seconds = cumulative[
+            group["end"]
+        ]
+
+        part_duration = max(
+            0.001,
+            end_seconds - start_seconds,
+        )
+
+        print(
+            f"Generando parte {part_number}/{total_parts}: "
+            f"{format_seconds(part_duration)} "
+            f"(" 
+            f"{format_seconds(start_seconds)} -> "
+            f"{format_seconds(end_seconds)}" 
+            f")."
+        )
+
+        # El corte comienza en un keyframe y no recodifica.
+        subprocess.run(
+            [
+                "ffmpeg",
+                "-ss",
+                str(start_seconds),
+                "-i",
+                str(source_path),
+                "-t",
+                str(part_duration),
+                "-map",
+                "0",
+                "-c",
+                "copy",
+                "-avoid_negative_ts",
+                "make_zero",
+                "-f",
+                "mpegts",
+                "-y",
+                str(destination),
+            ],
+            check=True,
+        )
+
+        part_paths.append(
+            {
+                "path": destination,
+                "part_number": part_number,
+                "total_parts": total_parts,
+            }
+        )
+
+    return part_paths
+
+
+def build_archive_video(
+    archive_info,
+):
+    """
+    Construye un objeto compatible con el resto del flujo de YouTube.
+    """
+    metadata = archive_info.get("metadata") or {}
+
+    title = str(
+        metadata.get("title")
+        or archive_info["identifier"]
+    )
+
+    description = str(
+        metadata.get("description")
+        or ""
+    )
+
+    date_value = str(
+        metadata.get("date")
+        or metadata.get("year")
+        or ""
+    )
+
+    match = re.search(
+        r"(\d{4}-\d{2}-\d{2})",
+        date_value,
+    )
+
+    if not match:
+        match = re.search(
+            r"(\d{2})/(\d{2})/(\d{4})",
+            title,
+        )
+
+    if match:
+        if len(match.groups()) == 1:
+            created_at = match.group(1)
+        else:
+            day, month, year = match.groups()
+            created_at = f"{year}-{month}-{day}"
+    else:
+        created_at = "1970-01-01"
+
+    # Archive.org conserva la metadata original de la VOD.
+    # Preferimos recuperar el ID de Kick desde las keywords/subjects
+    # para que la VOD archivada sea exactamente la misma VOD a efectos
+    # de títulos, tags y detección de duplicados.
+    kick_vod_id = None
+
+    subject_values = metadata.get("subject") or []
+    if isinstance(subject_values, str):
+        subject_values = [subject_values]
+
+    for subject in subject_values:
+        match = re.fullmatch(
+            r"kick-vod-id:(.+)",
+            str(subject).strip(),
+            flags=re.IGNORECASE,
+        )
+        if match:
+            kick_vod_id = match.group(1).strip()
+            break
+
+    if kick_vod_id is None:
+        match = re.search(
+            r"kick-vod-id:(\S+)",
+            description,
+            flags=re.IGNORECASE,
+        )
+        if match:
+            kick_vod_id = match.group(1).strip()
+
+    if not kick_vod_id:
+        # Fallback solo para items antiguos que no conservaran el ID de Kick.
+        kick_vod_id = archive_info["identifier"]
+        print(
+            "ADVERTENCIA: el item de Archive.org no contiene "
+            "kick-vod-id:<ID>; se usará el identifier de Archive.org "
+            "como fallback: "
+            f"{kick_vod_id}"
+        )
+
+    # La descripción de Archive.org normalmente conserva exactamente
+    # las tres secciones que usa el flujo de Kick: título de sesión,
+    # fecha/hora de inicio y URL de origen.
+    description_parts = [
+        part.strip()
+        for part in re.split(r"\n\s*\n+", description.strip())
+        if part.strip()
+    ] if description.strip() else []
+
+    session_title = description_parts[0] if description_parts else title
+    start_time = description_parts[1] if len(description_parts) >= 2 else ""
+    source = description_parts[2] if len(description_parts) >= 3 else (
+        f"https://archive.org/details/{archive_info['identifier']}"
+    )
+
+    return {
+        "id": str(kick_vod_id),
+        "created_at": created_at,
+        "session_title": session_title,
+        "start_time": start_time,
+        "source": source,
+        "archive_description": description,
+        "youtube_title": title,
+        "archive_identifier": archive_info["identifier"],
+    }
+
+
+def process_manual_archive_vod(
+    youtube,
+    archive_url,
+    legacy_vod_ids,
+    uploaded_part_tags,
+):
+    """
+    Ruta manual: descarga una VOD de Internet Archive y la sube a YouTube.
+    """
+    identifier = get_archive_identifier(
+        archive_url
+    )
+
+    archive_info = fetch_archive_item(
+        identifier
+    )
+
+    video = build_archive_video(
+        archive_info
+    )
+
+    video_id = str(
+        video["id"]
+    )
+
+    print(
+        f"Procesando VOD manual de Archive.org: {identifier}"
+    )
+
+    if video_id in legacy_vod_ids:
+        print(
+            f"La VOD de Kick {video_id} ya está subida a YouTube; "
+            "se omite la subida manual."
+        )
+        return True
+
+    video_directory = (
+        WORKSPACE
+        /
+        f"archive_{identifier}"
+    )
+
+    video_directory.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    source_path = (
+        video_directory
+        /
+        archive_info["file_name"]
+    )
+
+    download_archive_vod(
+        archive_info,
+        source_path,
+    )
+
+    try:
+        parts = split_archive_vod(
+            source_path,
+            video_directory,
+        )
+
+        total_parts = len(parts)
+
+        if has_complete_part_set(
+            video_id,
+            uploaded_part_tags,
+        ):
+            print(
+                f"La VOD {video_id} ya está completa en YouTube; "
+                "se omite la subida manual."
+            )
+            for existing_part in parts:
+                existing_part["path"].unlink(missing_ok=True)
+            return True
+
+        for part in parts:
+            part_number = part["part_number"]
+
+            part_tag = make_part_tag(
+                video_id,
+                part_number,
+                total_parts,
+            )
+
+            if part_tag in uploaded_part_tags:
+                print(
+                    f"La parte {part_number}/{total_parts} ya existe; se omite."
+                )
+                part["path"].unlink(
+                    missing_ok=True
+                )
+                continue
+
+            try:
+                _, uploaded_tag = upload_video(
+                    youtube,
+                    video,
+                    part["path"],
+                    part_number,
+                    total_parts,
+                )
+
+                uploaded_part_tags.add(
+                    uploaded_tag
+                )
+
+                if part_number < total_parts:
+                    print(
+                        f"Parte {part_number}/{total_parts} subida. "
+                        f"Esperando {UPLOAD_PAUSE_SECONDS} segundos "
+                        f"antes de continuar..."
+                    )
+
+                    time.sleep(
+                        UPLOAD_PAUSE_SECONDS
+                    )
+
+            finally:
+                part["path"].unlink(
+                    missing_ok=True
+                )
+
+        return True
+
+    finally:
+        source_path.unlink(
+            missing_ok=True
+        )
+
 
 def get_uploaded_markers(youtube):
     """
@@ -1037,8 +1724,11 @@ def build_video_metadata(
     )
 
 
-    base_title = (
-        f"{channel_name} | {formatted_date}"
+    base_title = str(
+        video.get(
+            "youtube_title"
+        )
+        or f"{channel_name} | {formatted_date}"
     )
 
 
@@ -1569,32 +2259,37 @@ def main():
     )
 
 
+    if ARCHIVE_URL:
+        processed = process_manual_archive_vod(
+            youtube,
+            ARCHIVE_URL,
+            legacy_vod_ids,
+            uploaded_part_tags,
+        )
 
-    videos = get_kick_videos()
+    else:
+        videos = get_kick_videos()
 
 
+        (
+            WORKSPACE
+            / "videos.json"
+        ).write_text(
+            json.dumps(
+                videos,
+                ensure_ascii=False,
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
 
-    (
-        WORKSPACE
-        / "videos.json"
-    ).write_text(
-        json.dumps(
+
+        processed = process_oldest_pending_video(
+            youtube,
             videos,
-            ensure_ascii=False,
-            indent=2,
-        ),
-        encoding="utf-8",
-    )
-
-
-
-    processed = process_oldest_pending_video(
-        youtube,
-        videos,
-        legacy_vod_ids,
-        uploaded_part_tags,
-    )
-
+            legacy_vod_ids,
+            uploaded_part_tags,
+        )
 
 
     if not processed:
