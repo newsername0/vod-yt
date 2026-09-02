@@ -2,6 +2,12 @@ name: Upload oldest VOD to YouTube
 
 on:
   workflow_dispatch:
+    inputs:
+      archive_url:
+        description: "URL opcional de la VOD en Archive.org (https://archive.org/details/...). Déjalo vacío para usar Kick."
+        required: false
+        type: string
+        default: ""
 
 concurrency:
   group: vector-youtube-upload
@@ -29,6 +35,7 @@ jobs:
         env:
           KICK_CHANNEL: vector
           WORKSPACE_DIR: /mnt/workspace
+          ARCHIVE_URL: ${{ inputs.archive_url }}
           YOUTUBE_PRIVACY_STATUS: public
           YOUTUBE_CATEGORY_ID: "20"
           MAX_PART_DURATION_SECONDS: "42600"
