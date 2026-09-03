@@ -537,7 +537,7 @@ def get_archive_identifier(vod_id):
 
     return (
 
-        f"{CHANNEL}-kick-vod-{vod_id}"
+        f"{CHANNEL}-rekick-vod-{vod_id}"
 
     )
 
@@ -746,7 +746,7 @@ def process_oldest_pending_video(videos):
 
 
         # Resuelve la playlist HLS de máxima calidad
-        # pero NO crea una copia local .m3u8
+         # pero NO crea una copia local .m3u8
 
         playlist_url = resolve_media_playlist(
             video["source"]
@@ -858,7 +858,6 @@ def process_oldest_pending_video(videos):
 
 
 
-
 def main():
 
     WORKSPACE.mkdir(
@@ -896,7 +895,6 @@ def main():
         print(
             "No hay VODs pendientes."
         )
-
 
 
 
