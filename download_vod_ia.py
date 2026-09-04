@@ -796,7 +796,7 @@ def process_oldest_pending_video(videos):
 
             /
 
-            f"{CHANNEL}_vod_{vod_id}.ts"
+            f"{CHANNEL}_vods_{vod_id}.ts"
 
         )
 
